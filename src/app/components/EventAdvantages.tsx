@@ -1,7 +1,6 @@
 "use client";
 import "./EventAdvantages.css";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 interface ExpandableCardProps {
   title: string;
@@ -23,9 +22,8 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({ title, description, ico
         </div>
         <h3 className="card-title">{title}</h3>
         <div className={`card-toggle ${isExpanded ? "rotate-180" : ""}`}>
-  <img src="./images/toddle.png" alt="toggle" />
-</div>
-
+          <img src="./images/toddle.png" alt="toggle" />
+        </div>
       </div>
       {isExpanded && <p className="card-description">{description}</p>}
     </div>
@@ -37,7 +35,7 @@ const EventAdvantages: React.FC = () => {
     {
       title: "Знайдете перспективних працівників",
       description:
-        "Ви зможете особисто поспілкуватися зі студентами різних спеціальностей, оцінити їх потенціал та сформувати базу перспективних кандидатів на актуальні для Вас вакансії. ",
+        "Ви зможете особисто поспілкуватися зі студентами різних спеціальностей, оцінити їх потенціал та сформувати базу перспективних кандидатів на актуальні для Вас вакансії.",
       icon: "./images/adv_perspective.png",
     },
     {
@@ -60,35 +58,35 @@ const EventAdvantages: React.FC = () => {
     },
     {
       title: "Дізнаєтесь очікування молоді щодо ринку праці",
-      description: "Участь у різноманітних воркшопах та панельних дискусіях, допоможе Вам краще зрозуміти потреби сучасної молоді. Це сприятиме ефективній співпраці зі студентами у майбутньому.",
+      description:
+        "Участь у різноманітних воркшопах та панельних дискусіях, допоможе Вам краще зрозуміти потреби сучасної молоді. Це сприятиме ефективній співпраці зі студентами у майбутньому.",
       icon: "./images/adv_expectations.png",
     },
     {
       title: "Інвестуєте у майбутнє та амбітну молодь",
-      description: "Це можливість допомогти реалізувати кар’єрний потенціал студентів, а також поділитись знаннями та досвідом Вашої команди на активностях нашого ярмарку.",
+      description:
+        "Це можливість допомогти реалізувати кар’єрний потенціал студентів, а також поділитись знаннями та досвідом Вашої команди на активностях нашого ярмарку.",
       icon: "./images/adv_invest.png",
     },
   ];
 
   return (
     <div>
-        <h2 className="h2">Переваги для Вас</h2>
-       
-
-<div className="container">
-    <div className="cards-container">
-      {cardsData.map((card, index) => (
-        <ExpandableCard
-          key={index}
-          title={card.title}
-          description={card.description}
-          icon={card.icon}
-        />
-      ))}
+      <h2 className="h2">Переваги для Вас</h2>
+      <div className="container">
+        <div className="cards-container">
+          {cardsData.slice(0, 3).map((card, index) => (
+            <ExpandableCard key={index} {...card} />
+          ))}
+        </div>
+        <div className="cards-container">
+          {cardsData.slice(3, 6).map((card, index) => (
+            <ExpandableCard key={index + 3} {...card} />
+          ))}
+        </div>
+        <img src="./images/lupkaZalupka.png" className="overlay-image" alt="overlay" />
+      </div>
     </div>
-    <img src="./images/lupkaZalupka.png"  className="overlay-image" />
- </div>
- </div>
   );
 };
 

@@ -12,14 +12,14 @@
   
   /* Контейнер для карток */
   .cards-container {
-    display: grid; /* Використання сітки */
-    grid-template-columns: repeat(2, 25rem); /* Дві колонки по 27rem */
-    gap: 3rem; 
-    justify-content:space-between; 
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap:30px;
+    flex-wrap: wrap;
     align-items: space-between;
-    width: auto; 
-    margin-left: 5%; 
-    margin-right: 5%;
+    flex-grow: 0;
+    flex-basis: 30%;
   }
   
   /* Загальні стилі для карток */
@@ -27,7 +27,6 @@
     border: 3px solid #3b82f6;
     border-radius: 16px;
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -45,7 +44,7 @@
   .card-collapsed {
     height: 7rem; /* Фіксована висота */
     display: flex;
-    flex-direction: row; /* Елементи розташовані в ряд */
+    flex-direction: row; 
     justify-content: space-between; /* Розподіл елементів */
     align-items: center;
     padding: 0 1rem; /* Відступи з боків */
@@ -71,9 +70,9 @@
   
   /* Розгорнутий стан */
   .card-expanded {
-    height: auto; /* Висота залежить від контенту */
-    flex-direction: column; /* Елементи розташовуються вертикально */
-    padding: 1.5rem; /* Стандартні відступи */
+    /* display:flex; */
+    height: auto;
+    padding: 1.5rem;
   }
   
   /* Заголовок картки */
@@ -115,19 +114,20 @@
   }
   .container {
     position: relative; 
-    margin-bottom: 10%;/* Це важливо для роботи з абсолютно позиціонованими дочірніми елементами */
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 240px;
   }
   
   .overlay-image {
-    position:absolute; /* Абсолютне позиціонування відносно контейнера */
-    top: 0;
-    width: 584px;
-    height: 584px;
+    position:absolute;
+    width: 465px;
+    height: 451px;
     left: 30%;
-    top:-20%; /* Встановлює відступ зліва */
+    top: 0;
     z-index: 10;
-    pointer-events: none; /* Забезпечує, що картинка буде поверх інших елементів */
-    /* Зберігає пропорції зображення */
+    pointer-events: none; 
   }
   
   
