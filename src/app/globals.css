@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* Загальні стилі для body */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Покриває всю висоту сторінки */
+  width: 100%; /* Покриває всю ширину */
+  overflow-y: visible;
+  background-attachment: scroll;
+  z-index: 0;
+  font-family: 'Nunito', sans-serif; /* Застосування шрифту Nunito */
+}
+/* Хедер */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #111A94;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.h2 {
+  margin-top:10%;
+  color: #257BFC;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0px 15px 0;
+  text-align: center;
+  width: 100%;
+  font-family: 'Exo 2';
+}
+.title {
+  margin-bottom: 10%;
+  color: #257BFC;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0px 15px 0;
+  text-align: center;
+  width: 100%;
+  font-family: 'Exo 2';
+}

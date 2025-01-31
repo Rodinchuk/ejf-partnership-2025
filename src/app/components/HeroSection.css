@@ -1,0 +1,71 @@
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 25%;
+  }
+  
+.hero-section{
+  background: linear-gradient(180deg, #257BFC, #111A94); /* Синій градієнт */
+
+}  
+.image-vector{
+    position:absolute;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    top:70%;
+    margin-bottom: 25%;
+    pointer-events: none; /* Забезпечує, що картинка буде поверх інших елементів */
+    /* Зберігає пропорції зображення */
+}
+  .text-container {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #a1cfff;
+  }
+  
+  .info {
+    margin-top: 2rem;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+  

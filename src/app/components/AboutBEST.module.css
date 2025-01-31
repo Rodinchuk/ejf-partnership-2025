@@ -1,0 +1,105 @@
+/* CSS файл для компонента BestLviv */
+
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    margin-bottom: 10%;
+    color: #257BFC;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0px 15px 0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Exo 2';
+  }
+  
+  .contentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 50px;
+  }
+  
+  .textBlock {
+    flex: 1;
+    max-width: 633px;
+    border: 3px solid #0056d6;
+    padding: 40px;
+    border-radius: 20px;
+    gap: 70px;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #257BFC;
+    margin-bottom: 10%;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0px 15px 0;
+    width: 100%;
+    font-family: 'Exo 2';
+  }
+  
+  .description {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .link {
+    font-size: 22px;
+    color: #0056d6;
+    text-decoration: none;
+    font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .infoBlock {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .statItem {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Nutino', sans-serif;
+  }
+  
+  .statNumber {
+    font-size: 45px;
+    font-weight: bold;
+    color: #0056d6;
+    padding-right: 5px;
+  }
+  
+  .statLabel {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Nutino', sans-serif;
+  }
+.section{
+    margin-top: 20%;
+}

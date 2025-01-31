@@ -1,0 +1,133 @@
+/* Заголовок секції */
+.h2 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: #257BFC;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    font-family: 'Exo 2', sans-serif;
+  }
+  
+  /* Контейнер для карток */
+  .cards-container {
+    display: grid; /* Використання сітки */
+    grid-template-columns: repeat(2, 25rem); /* Дві колонки по 27rem */
+    gap: 3rem; 
+    justify-content:space-between; 
+    align-items: space-between;
+    width: auto; 
+    margin-left: 5%; 
+    margin-right: 5%;
+  }
+  
+  /* Загальні стилі для карток */
+  .card {
+    border: 3px solid #3b82f6;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1.5rem;
+  }
+  
+  /* Закритий стан */
+  .card-collapsed {
+    height: 7rem; /* Фіксована висота */
+    display: flex;
+    flex-direction: row; /* Елементи розташовані в ряд */
+    justify-content: space-between; /* Розподіл елементів */
+    align-items: center;
+    padding: 0 1rem; /* Відступи з боків */
+    gap: 1rem;
+  }
+  
+  /* У закритому стані заголовок і стрілка */
+  .card-collapsed .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+    white-space: nowrap; /* Забороняє переноси */
+    overflow: hidden; /* Приховує зайвий текст */
+    text-overflow: ellipsis; /* Додає три крапки, якщо текст довший за контейнер */
+  }
+  
+  .card-collapsed .card-toggle {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Розгорнутий стан */
+  .card-expanded {
+    height: auto; /* Висота залежить від контенту */
+    flex-direction: column; /* Елементи розташовуються вертикально */
+    padding: 1.5rem; /* Стандартні відступи */
+  }
+  
+  /* Заголовок картки */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .card-icon img {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  /* Опис картки */
+  .card-description {
+    font-size: 0.875rem;
+    color: #4b5563;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: left; /* Вирівнювання тексту для читабельності */
+    line-height: 1.5;
+  }
+  
+  /* Іконка заголовка */
+  .card-icon {
+    padding: 0.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Стилі стрілочки */
+  .card-toggle.rotate-180 {
+    transform: rotate(180deg);
+  }
+  .container {
+    position: relative; 
+    margin-bottom: 10%;/* Це важливо для роботи з абсолютно позиціонованими дочірніми елементами */
+  }
+  
+  .overlay-image {
+    position:absolute; /* Абсолютне позиціонування відносно контейнера */
+    top: 0;
+    width: 584px;
+    height: 584px;
+    left: 30%;
+    top:-20%; /* Встановлює відступ зліва */
+    z-index: 10;
+    pointer-events: none; /* Забезпечує, що картинка буде поверх інших елементів */
+    /* Зберігає пропорції зображення */
+  }
+  
+  

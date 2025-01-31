@@ -1,0 +1,128 @@
+.container {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .title {
+    margin-bottom: 10%;
+    color: #257BFC;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Exo 2';
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    font-family: 'Exo 2';
+    align-items: end;
+  }
+  
+  .card {
+    color: #A5CAF9;
+    font-weight: bold;
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    background: linear-gradient(180deg, #257bfc, #111a94); /* Градієнт для всіх карток */
+  }
+  .infoButton {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    cursor: pointer;
+  }
+  
+  
+  .instcard {
+    
+    background: linear-gradient(180deg, #fff, #fff);
+    color: #257bfc;
+    border-radius: 24px;
+    border: 3px  solid  #257bfc;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .lilcard{
+    background: linear-gradient(180deg, #fff, #fff);
+    color: #257bfc;
+    font-weight: bold;
+    border-radius: 24px;
+    border: 3px  solid  #257bfc;
+    padding: 10px;
+    font-size: small;
+    text-align: left;
+    align-items: center;
+    width: 15%; /* Обмежуємо ширину на 80% */
+    word-wrap: break-word;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .highlight {
+    background-color: #0056b3; /* Для Instagram залишається окремий стиль */
+    font-weight: bold;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .followers {
+    font-size: 1.25rem;
+    margin: 0.25rem 0;
+  }
+  
+  .name {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+ 
+  .infoButton:hover {
+    background-color: #fff;
+  }
+  
+  .infoModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .infoContent {
+    text-align: left;
+  }
+  
+  .infoContent h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .infoContent ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .infoContent li {
+    margin-bottom: 0.5rem;
+  }
+  

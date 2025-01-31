@@ -1,0 +1,170 @@
+.container {
+    padding: 20px;
+}
+
+.carousel {
+    position: relative;
+    padding: 5% 5%;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    width: 415px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    overflow: visible; 
+    border: 3px solid #111A94
+}
+
+.kripachCard {
+    background: linear-gradient(180deg, #257bfc, #111a94);
+}
+
+.card img {
+    width: 340px; /* Робить зображення круглим */
+    height: 340px;
+    object-fit: cover;
+    position: absolute;
+    top: -170px; /* Половина висоти зображення виходить за межі картки */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.card .content {
+    margin-top: 80px; 
+    align-items: center;/* Зсуває текст вниз, щоб він не заходив на зображення */
+}
+
+.name {
+    margin-top: 180px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #257BFC;
+}
+
+.role {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contactInfo {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .cardContainer {
+        display: block;
+        align-items: center;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .arrow:first-of-type {
+        left: 0;
+    }
+
+    .arrow:last-of-type {
+        right: 0;
+    }
+    
+.specialCard {
+    background: linear-gradient(180deg, #257BFC, #111A94);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border: none;
+    transform: none;
+  }
+}
+
+.title {
+    margin-bottom: 10%;
+    color: #257BFC;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    font-family: 'Exo 2';
+}
+.specialCard {
+    background: linear-gradient(180deg, #257BFC, #111A94);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border: none;
+    transform: translateY(5%);
+  }
+  
+  .image {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    margin-bottom: 5%;
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    
+    margin-bottom: 5%;
+  }
+  
+  .role {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 5%;
+  }
+  
+    .divider {
+        width: 80%;
+        height: 0.5px;
+        background: white;
+        margin: 10px auto; /* Центрує елемент */
+        border-radius: 50px;
+        margin-bottom: 5%;
+      }
+      
+  
+  
+  .contactInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5%;
+  }
+
+  
+  .specialText {
+    color: #DBEBFF; /* Наприклад, інший відтінок */
+    font-weight: bold;
+  }
+  
