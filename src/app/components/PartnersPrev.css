@@ -25,3 +25,47 @@
     text-align: center;
     width: 100%;
     font-family: 'Exo 2';}
+    @media (max-width: 768px) { 
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        .partner {
+            flex: 1 1 auto; /* Пропорційне масштабування */
+            max-width: 30%; /* Змінюй це значення, якщо потрібно */
+            height: auto;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .partner img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* Гарантує, що зображення вміщається повністю */
+        }
+    
+        .partners-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 545px;
+        }
+    
+        /* Відсуває наступний секцію вниз, якщо потрібно */
+        .partners::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 20px; /* Регулює відступ */
+        }
+    }
+    

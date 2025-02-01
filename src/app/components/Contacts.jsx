@@ -49,7 +49,7 @@ export default function Contacts() {
   };
 
   return (
-    <section className={styles.container}>
+    <section id="contacts" className={styles.container}>
       <h2 className={styles.title}>Контакти</h2>
       <div className={styles.carousel}>
         {isMobile && (

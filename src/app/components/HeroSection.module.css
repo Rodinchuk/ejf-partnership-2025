@@ -1,0 +1,211 @@
+/* components/CareerFairBanner.module.css */
+.careerBanner {
+  position: relative;
+  background: linear-gradient(180deg, #257BFC, #111A94);
+  color: white; 
+  padding: 4rem 0 0; 
+  text-align: left;
+  width: 100%; /* Забираємо обмеження ширини */
+}
+
+.content {
+  width: 100%; /* Ширина на весь екран */
+  margin: 0 auto;
+  padding-bottom: 30px;
+  padding-top: 5%;
+
+}
+
+.vectorSection {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-top: 2px; /* Піднімаємо наполовину висоти */
+}
+
+.vectorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  border-radius: 0%;
+  margin-top: 0;
+  
+  padding: calc(4rem - 30px) 0 -30px;
+}
+
+.title { font-size: 96px; margin-left: 5%; font-family: "Exo 2"; font-weight: 700; }
+.subtitle {font-size: 96px; margin-left: 5%; ; font-family: "Exo 2"; font-weight: 700; margin-bottom: 2rem; }
+.highlightText { font-size: 32px;  margin-left: 5%; margin-bottom: 2rem; color: #55A7FF; }
+.universities { list-style: none; padding: 0; font-size: 1.2rem; margin-bottom: 2rem; }
+.universities li { margin: 0.5rem 0; }
+
+@media (max-width: 768px) {
+  .content {
+    padding-bottom: 70px;
+  }
+  
+  .vectorSection {
+    height: 60px;
+    margin-top: -35px;
+  }
+  
+  .title { font-size: 2rem; }
+  .subtitle { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-bottom: 50px;
+  }
+  
+  .vectorSection {
+    height: 50px;
+    margin-top: -25px;
+    
+  }
+}
+.sideImage {
+  width: 200px; 
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+.sideImage:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 1024px) {
+  .careerBanner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imageContainer {
+    position: static;
+    flex-direction: row;
+    gap: 10px;
+    transform: none;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .sideImage {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding-bottom: 70px;
+  }
+
+  .imageContainer {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .sideImage {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-bottom: 50px;
+  }
+
+  .sideImage {
+    width: 100px;
+  }
+}
+
+.briefcase {
+  position: absolute;
+  width: 633px;
+  height: 633px;
+  left: 55%;
+  top: 10%;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 1024px) {
+  .briefcase {
+    width: 450px;
+    height: 450px;
+    left: 50%;
+    top: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .briefcase {
+    width: 350px;
+    height: 350px;
+    left: 20%;
+    top: 15%;
+  }
+}
+
+@media (max-width: 480px) {
+  .briefcase {
+    width: 350px;
+    height: 3500px;
+    left: 20%;
+    top: 15%;
+  }
+}
+.containerhero {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  width: fit-content;
+  margin-left: 5%;
+}
+
+.uni {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.universities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.universities li:first-child {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.universities li:last-child {
+  font-size: 1rem;
+}
+
+.separator {
+  height: 40px;
+  width: 1px;
+  background: #2A5DCF;
+  margin: 0 1.5rem;
+}
+
+.ejfdate {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.location, .calendar {
+  flex-shrink: 0;
+}
+@media (max-width: 768px){
+  .containerhero{
+    flex-direction: column;
+    align-items: center;
+  }
+}

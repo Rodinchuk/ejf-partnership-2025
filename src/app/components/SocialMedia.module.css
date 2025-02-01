@@ -56,8 +56,7 @@
   }
   .lilcard{
     background: linear-gradient(180deg, #fff, #fff);
-    color: #257bfc;
-    font-weight: bold;
+    color: #767676;
     border-radius: 24px;
     border: 3px  solid  #257bfc;
     padding: 10px;
@@ -124,5 +123,60 @@
   
   .infoContent li {
     margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  
+    .title {
+      font-size: 2rem;
+      text-align: center;
+      margin: 20px;
+    }
+  
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .card, .instcard {
+      width: 100%;
+      padding: 20px;
+      border-radius: 16px;
+      display: flex;
+      text-align: left;
+      margin: 20px;
+      background: linear-gradient(180deg, #fff, #fff);
+      border: 3px  solid  #257bfc;
+    color: #257bfc;
+
+    }
+  
+    .card img, .instcard img {
+      width: 48px;
+      height: 48px;
+      margin: 20px;
+    }
+  
+    .followers {
+      font-size: 1.5rem;
+    }
+  
+    .infoButton {
+      margin-left: auto;
+    }
+  
+    .lilcard {
+      width: 60%;
+      padding: 15px;
+      font-size: 0.9rem;
+      text-align: left;
+      
+    }
   }
   

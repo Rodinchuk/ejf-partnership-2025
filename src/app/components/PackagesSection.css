@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  font-size: larger;
+
+}
+
+/* Section styles */
+.packages-section {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #111A94, #1e65d0, #111A94);
+}
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Додай або зменши gap для контролю відстані між елементами */
+  }
+  
+
+/* Title styles */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: 'Exo 2';
+}
+
+.section-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: 'Exo 2';
+}
+
+/* Packages grid styles */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два стовпці */
+  gap: 10px;
+  width: 100%;
+  max-width: 900px; /* Обмежуємо максимальну ширину сітки */
+}
+
+.package-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.package-card:hover {
+  transform: scale(1.02);
+}
+
+.package-card.selected {
+  border: 2px solid #003366;
+}
+
+/* Перший пакет займає весь перший ряд */
+.package-card:first-child {
+  grid-column: span 2; /* Займає два стовпці */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Два інші пакети розташовуються на другому ряді */
+.package-card:nth-child(2),
+.package-card:nth-child(3) {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Additional services styles */
+.additional-services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.additional-service-item {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Cart container styles */
+.cart-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.cart-container h3 {
+  font-size: 20px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.cart-total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003366;
+  margin-top: 20px;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: center;
+  z-index: 1001;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #00ccff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+  }
+
+  .package-card {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .cart-container {
+    padding: 15px;
+  }
+
+  .cart-container h3 {
+    font-size: 18px;
+  }
+
+  .cart-total {
+    font-size: 16px;
+  }
+
+  /* На малих екранах пакети відображаються один під одним */
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-card:first-child {
+    grid-column: span 1;
+  }
+}
+
+/* Additional services styles */
+.additional-services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.additional-service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.additional-service-item i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #555;
+  cursor: pointer;
+}
+
+.additional-service-item i:hover {
+  color: #003366;
+}
+
+.additional-service-item .service-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.additional-service-item .service-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003366;
+  text-align: right;
+}
+
+.additional-service-item.selected {
+  border: 2px solid #003366;
+}
+
+@media (max-width: 768px) {
+  .additional-service-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .additional-service-item .service-price {
+    margin-top: 10px;
+    text-align: left;
+  }
+}

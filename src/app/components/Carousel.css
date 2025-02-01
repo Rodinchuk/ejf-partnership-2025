@@ -1,9 +1,8 @@
 .carousel-container {
-    width: 500px;
-    height: 500px;
+    width: 414px;
+    height: 378px;
     overflow: hidden;
     border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
   }
   

@@ -9,7 +9,9 @@ body, html {
   overflow-y: visible;
   background-attachment: scroll;
   z-index: 0;
-  font-family: 'Nunito', sans-serif; /* Застосування шрифту Nunito */
+  font-family: 'Nunito', sans-serif;
+
+  scroll-behavior: smooth;
 }
 /* Хедер */
 .header {

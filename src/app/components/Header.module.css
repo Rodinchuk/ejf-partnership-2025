@@ -1,0 +1,206 @@
+/* Загальні стилі для хедера */
+.header { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* логотип зліва, навігація по центру, кнопка справа */
+  padding: 1rem 5%; /* 5% відступ зліва і справа */
+  background-color: #111A94;
+  color: white;
+  font-family: 'Nutino', sans-serif; /* використання шрифту Nutino */
+  z-index: 1000; /* забезпечує відображення поверх інших елементів */
+}
+
+/* Логотип */
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  transition: transform 0.5s ease;
+}
+
+.logo.spin {
+  transform: rotate(360deg);
+}
+
+/* Навігація */
+.nav {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* розтягує простір між логотипом та кнопкою */
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem; /* рівномірний відступ між елементами */
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  text-align: center;
+  font-family: 'Nutino', sans-serif;
+  font-weight: bolder;
+}
+
+.navList li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.menuIcon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; 
+  background-color: #111A94;
+  padding: 1rem 0; 
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.mobileMenu.open {
+  transform: translateX(0);
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.mobileMenu ul li {
+  margin: 1.5rem 0;
+}
+
+.mobileMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .menuIcon {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+}
+
+.partnerButton {
+  background-color: white;
+  color: #111A94;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 140%;
+  margin-left: 60%;
+  transition: transform 0.2s ease-in-out; 
+}
+
+.partnerButton:hover {
+  transform: scale(1.1); 
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #111A94;
+  padding: 1rem 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileMenu.open {
+  transform: translateX(0);
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.mobileMenu ul li {
+  margin: 1.5rem 0;
+}
+
+.mobileMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Стилі для кнопки у мобільному меню */
+.mobileMenu .partnerButton { 
+  width: 100%;
+  margin-left: 0;
+}

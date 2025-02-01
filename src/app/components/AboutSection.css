@@ -1,63 +1,65 @@
-.about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90%; /* Adjusted width */
-    background-color: white;
-    padding: 0; /* Removed padding */
-    margin: 0 auto; /* Center the section */
-}
 
-@media (min-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        margin-bottom: 10%;
-    }
-
-    .about-section .content {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        gap:10%;
-        justify-content: center;
-        align-items: flex-start;
-    }
-}
-
-.about-section h2 {
-    
-        margin-bottom: 10%;
-        color: #257BFC;
-        font-size: 3rem;
-        font-weight: bold;
-        margin: 0 0px 15px 0;
-        text-align: center;
-        width: 100%;
-        font-family: 'Exo 2';
-      
-}
-
-.about-section .left-section {
-    width: 500px;
-    height: 500px;
-    padding: 0; /* Removed padding */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
- .goal{
+.about-container {
+    padding: 4rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
     color: #257BFC;
- }
-
-.about-section .right-section {
-    flex: 1;
-    height: 500px; /* Set height to match left section */
-    padding: 0; /* Removed padding */
-    border-radius: 20px;
-    color: #767676;
-    font-size: 24px;
+    font-family: 'Exo 2';
+  }
+  
+  .about-content {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around; /* Distribute text evenly */
-}
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .about-carousel {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-text {
+    flex: 1;
+    color: #767676;
+    line-height: 1.6;
+  }
+  
+  .about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .goal-highlight {
+    color: #3182ce;
+    font-weight: 600;
+  }
+@media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+    }
+  
+    .about-carousel {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto; /* Додано центрування */
+      padding: 0 1rem; /* Додано відступи для кращого вигляду */
+    }
+  
+    .about-text {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-carousel {
+      max-width: 100%; /* Повна ширина на дуже малих екранах */
+      padding: 0; /* Видаляємо відступи */
+    }
+  }
