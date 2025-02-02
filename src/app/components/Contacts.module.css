@@ -14,27 +14,23 @@
 }
 
 .card {
-    width: 415px;
-    padding: 20px;
+    width: auto;
+    height: auto;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
     overflow: visible; 
     border: 3px solid #111A94
 }
 
-.kripachCard {
-    background: linear-gradient(180deg, #257bfc, #111a94);
-}
 
 .card img {
-    width: 340px; /* Робить зображення круглим */
+    width: 340px; 
     height: 340px;
-    object-fit: cover;
+    object-fit:contain;
     position: absolute;
-    top: -170px; /* Половина висоти зображення виходить за межі картки */
+    top: -50%; 
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
@@ -101,10 +97,32 @@
     border: none;
     transform: none;
   }
+  .card img {
+    width: 270; 
+    height: 270;
+    object-fit:contain;
+    position: absolute;
+    top: -35%; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+}
+@media (max-width: 480px){
+    
+.specialCard {
+    background: linear-gradient(180deg, #257BFC, #111A94);
+    padding: none;
+    color: white;
+    text-align: center;
+    border: none;
+    transform: none;
+  }
 }
 
+
 .title {
-    margin-bottom: 10%;
+    margin-bottom: 50%;
     color: #257BFC;
     font-size: 3rem;
     font-weight: bold;

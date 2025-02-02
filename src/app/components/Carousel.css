@@ -4,6 +4,9 @@
     overflow: hidden;
     border-radius: 16px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .carousel-slide {
@@ -33,4 +36,28 @@
   
   .carousel-dot.active {
     background-color: white;
+  }
+  @media (max-width: 786px) {
+    .carousel-container {
+      width: 320px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 16px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 480px) {
+    .carousel-container {
+      width: 280px;
+      height: 260px;
+      overflow: hidden;
+      border-radius: 16px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }

@@ -143,7 +143,7 @@
   }
 
   .pictures img:nth-child(2) {
-    width: 100%;
-    margin-bottom: 20px;
+    max-width: 450px;
+    margin-bottom: 5px;
   }
 }
