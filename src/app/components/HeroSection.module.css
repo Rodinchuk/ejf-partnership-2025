@@ -6,6 +6,7 @@
   padding: 4rem 0 0; 
   text-align: left;
   width: 100%; /* Забираємо обмеження ширини */
+  z-index: 5;
 }
 
 .content {
@@ -13,7 +14,6 @@
   margin: 0 auto;
   padding-bottom: 30px;
   padding-top: 5%;
-
 }
 
 .vectorSection {
@@ -30,15 +30,17 @@
   display: block;
   border-radius: 0%;
   margin-top: 0;
-  
   padding: calc(4rem - 30px) 0 -30px;
 }
 
 .title { font-size: 96px; margin-left: 5%; font-family: "Exo 2"; font-weight: 700; }
 .subtitle {font-size: 96px; margin-left: 5%; ; font-family: "Exo 2"; font-weight: 700; margin-bottom: 2rem; }
-.highlightText { font-size: 32px;  margin-left: 5%; margin-bottom: 2rem; color: #55A7FF; }
+.highlightText { font-size: 32px;  margin-left: 5%;margin-bottom: 2rem;; color: #55A7FF; }
 .universities { list-style: none; padding: 0; font-size: 1.2rem; margin-bottom: 2rem; }
 .universities li { margin: 0.5rem 0; }
+.bubbles{
+  display: none;
+}
 
 @media (max-width: 768px) {
   .content {
@@ -50,8 +52,16 @@
     margin-top: -35px;
   }
   
-  .title { font-size: 2rem; }
-  .subtitle { font-size: 1.5rem; }
+  .title { font-size: 45px; }
+  .subtitle { font-size: 45px; }
+  .highlightText {font-size: 25px;}
+  
+  .separator {
+    height: 1px;
+    width: 80%;
+    background: #2A5DCF;
+    margin: 1.5rem auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -62,9 +72,13 @@
   .vectorSection {
     height: 50px;
     margin-top: -25px;
-    
   }
+  
+  .title { font-size: 45px;}
+  .subtitle { font-size: 45px; }
+  .highlightText {font-size: 25px;}
 }
+
 .sideImage {
   width: 200px; 
   height: auto;
@@ -95,6 +109,7 @@
     width: 150px;
   }
 }
+
 
 @media (max-width: 768px) {
   .content {
@@ -134,15 +149,26 @@
 
 @media (max-width: 1024px) {
   .briefcase {
+   display: none;
+  }
+  .bubbles {
+    
+    position: absolute;
     width: 450px;
     height: 450px;
     left: 50%;
     top: 15%;
+    z-index: 1;
+    overflow-x: hidden;
   }
 }
 
 @media (max-width: 768px) {
   .briefcase {
+    display: none;
+   }
+  .bubbles {
+    position: absolute;
     width: 350px;
     height: 350px;
     left: 20%;
@@ -152,11 +178,26 @@
 
 @media (max-width: 480px) {
   .briefcase {
-    width: 350px;
-    height: 3500px;
-    left: 20%;
-    top: 15%;
+    display: none;
+   }
+  .bubbles {
+    display:block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 3%;
+    top: 10%;
+    z-index: 1;
   }
+  .containerhero {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10%;
+  }
+  
 }
 .containerhero {
   display: flex;
@@ -169,7 +210,7 @@
 .uni {
   display: flex;
   align-items: center;
-  gap: 1rem;
+ 
 }
 
 .universities {
@@ -203,9 +244,42 @@
 .location, .calendar {
   flex-shrink: 0;
 }
+
 @media (max-width: 768px){
   .containerhero{
     flex-direction: column;
     align-items: center;
+    margin-left: 20%;
+  }
+
+  .separator {
+    height: 1px;
+    width: 80%;
+    background: #2A5DCF;
+  }
+  .calendar{
+    margin-right: 20px;
+  }
+  .location{
+    margin-right:  20px;
+  }
+  .bubbles {
+    display:block;
+    position: absolute;
+    width: 415px;
+    height: 500px;
+    left: 3%;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 768px) {
+  .uni {
+    margin: 0;
+    gap: 0; /* Видаляємо gap */
+  }
+
+  .ejfdate {
+    margin: 0;
+    gap: 0; /* Видаляємо gap */
   }
 }
