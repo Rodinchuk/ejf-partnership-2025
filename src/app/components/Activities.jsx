@@ -1,4 +1,3 @@
-// activities.jsx
 "use client";
 import React, { useState } from "react";
 import "./Activities.css";
@@ -8,22 +7,16 @@ const ExpandableCard = ({ title, description }) => {
 
   return (
     <div
-      className={`border border-blue-300 rounded-2xl p-4 transition-all duration-300 ${
-        isExpanded ? "bg-blue-50" : "bg-white"
-      }`}
+      className={`card ${isExpanded ? "card-expanded" : "card-collapsed"}`}
       onClick={() => setIsExpanded(!isExpanded)}
     >
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold text-blue-600">{title}</h3>
-        <button
-          className={`transform transition-transform duration-300 ${
-            isExpanded ? "rotate-180" : "rotate-0"
-          }`}
-        >
-          <img src="./images/toggle.png" alt="toggle" className="w-6 h-6" />
-        </button>
+      <div className="card-header">
+        <h3 className="card-title">{title}</h3>
+        <div className={`card-toggle ${isExpanded ? "rotate-180" : ""}`}>
+          <img src="./images/toddle.png" alt="toggle" />
+        </div>
       </div>
-      {isExpanded && <p className="mt-2 text-gray-600">{description}</p>}
+      {isExpanded && <p className="description">{description}</p>}
     </div>
   );
 };
@@ -32,40 +25,46 @@ const Activities = () => {
   const cardsData = [
     {
       title: "Інформаційні зони",
-      description: "Дізнайтеся більше про можливості, доступні на заході.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: "Воркшопи",
-      description: "Отримайте практичні знання від експертів.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: "Панельна дискусія",
-      description: "Послухайте думки спеціалістів із різних галузей.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: "Share and Win",
-      description: "Взаємодійте з нашим брендом та отримуйте подарунки.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: "BEST Treasure Hunt",
-      description: "Приймайте участь у захопливому квесті.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: "Симуляція співбесід",
-      description: "Попрактикуйте навички співбесіди з професіоналами.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: "Нетворкінг",
-      description: "Зустрічайте нових друзів і партнерів.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
   ];
 
   return (
-    <div className="activities-container px-6 py-8 bg-gray-50">
+    <section className="container">
       <h2 className="title">Активності</h2>
-      <div className="content-wrapper grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Ліва частина — картки */}
-        <div className="cards flex flex-col justify-between">
+      <div className="contentwrapper">
+        <div className="cardcontainer">
           {cardsData.map((card, index) => (
             <ExpandableCard
               key={index}
@@ -74,16 +73,25 @@ const Activities = () => {
             />
           ))}
         </div>
-        {/* Права частина — зображення */}
-        <div className="images-section grid grid-cols-2 gap-4">
+        <div className="pictures">
           <img
-            src="./images/activities.png"
+            src="./images/activity1.png"
             alt="Activity 1"
-            className="w-full h-auto rounded-xl"
+            className="activity1"
+          />
+          <img
+            src="./images/activity2.png"
+            alt="Activity 2"
+            className="activity2"
+          />
+          <img
+            src="./images/activity3.png"
+            alt="Activity 3"
+            className="activity3"
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
