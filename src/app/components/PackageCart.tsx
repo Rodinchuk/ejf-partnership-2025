@@ -31,7 +31,7 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
         {pkg.info && (
           <Dialog>
             <DialogTrigger asChild>
-              <button className="info-button" onClick={onInfoClick}>ⓘ</button>
+              <button className="info-button" onClick={onInfoClick}><img src="./images/info.png"/></button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>

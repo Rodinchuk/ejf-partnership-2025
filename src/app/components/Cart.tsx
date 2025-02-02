@@ -77,7 +77,7 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
   const hasDiscount = total !== originalTotal;
 
   return (
-    <div className="glass-card">
+    <div>
       <h2>Кошик</h2>
       
       <div className="form-group">

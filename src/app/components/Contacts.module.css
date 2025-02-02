@@ -67,6 +67,16 @@
 }
 
 @media (max-width: 768px) {
+    
+    .title {
+        margin-bottom: 20%;
+        color: #257BFC;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        font-family: 'Exo 2';
+    }
     .cardContainer {
         display: block;
         align-items: center;
@@ -106,6 +116,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
+   
 }
 }
 @media (max-width: 480px){
@@ -117,19 +128,10 @@
     text-align: center;
     border: none;
     transform: none;
-  }
+}
 }
 
 
-.title {
-    margin-bottom: 50%;
-    color: #257BFC;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    font-family: 'Exo 2';
-}
 .specialCard {
     background: linear-gradient(180deg, #257BFC, #111A94);
     padding: 20px;
@@ -185,4 +187,29 @@
     color: #DBEBFF; /* Наприклад, інший відтінок */
     font-weight: bold;
   }
-  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+.arrow:first-of-type {
+    left: 10px;
+}
+
+.arrow:last-of-type {
+    right: 10px;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    top: -20%;
+}

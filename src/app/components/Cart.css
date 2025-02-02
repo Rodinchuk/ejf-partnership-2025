@@ -1,0 +1,132 @@
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Збільшено максимальну ширину контейнера */
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #257BFC;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cart-item-actions button {
+    background: none;
+    border: none;
+    color: #257BFC;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .cart-item-actions button:hover {
+    color: #257BFC;
+  }
+  
+  .total-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .strikethrough {
+    text-decoration: line-through;
+    color: #666;
+    margin-right: 10px;
+  }
+  
+  .final-price {
+    font-weight: bold;
+    color: #257BFC;
+  }
+  
+  .Input {
+    width: 100%; /* Поля займають всю доступну ширину */
+    padding: 12px; /* Збільшено padding для більшого розміру */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Щоб padding не збільшував загальну ширину */
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px; /* Збільшено padding для більшого розміру */
+    background-color: #257BFC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #1a5bbf;
+  }
+  
+  /* Додаткові стилі для знижок та інших елементів */
+  .discount-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .discount-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .discount-info li {
+    margin-bottom: 5px;
+  }
+  
+  .company-info {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .company-info p {
+    margin: 5px 0;
+  }
+  
+  .help-info {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+  }

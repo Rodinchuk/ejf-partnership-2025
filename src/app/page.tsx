@@ -11,6 +11,7 @@ import AboutBEST from './components/AboutBEST';
 import Contacts from './components/Contacts';
 import Conclusion from "./components/Conclusion";
 import PackagesSection from './components/PackagesSection';
+import Footer from './components/Footer';
 import './globals.css';
 
 export default function Home() {   
@@ -30,6 +31,7 @@ export default function Home() {
       <AboutBEST />
       <Contacts />
       <Conclusion />
+      <Footer />
     </>
   );
 }

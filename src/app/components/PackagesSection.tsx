@@ -126,14 +126,13 @@ const PackagesSection = () => {
 
         <div className="additional-services-container">
           {additionalServices.map(service => (
-            <div className="additional-service-item" key={service.id}>
-              <AdditionalService
+              <AdditionalService key={service.id}
                 service={service}
                 isSelected={selectedServices.some(s => s.id === service.id)}
                 onSelect={() => handleServiceSelect(service.id)}
                 onInfoClick={() => handleInfoClick(service.info)}
               />
-            </div>
+           
           ))}
         </div>
 
@@ -146,7 +145,7 @@ const PackagesSection = () => {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <p>{modalContent}</p>
-            <button onClick={closeModal}>Close</button>
+            <button onClick={closeModal}></button>
           </div>
         </div>
       )}

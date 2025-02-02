@@ -13,7 +13,6 @@ body {
 
 }
 
-/* Section styles */
 .packages-section {
   padding: 20px 0;
   display: flex;
@@ -26,43 +25,46 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Додай або зменши gap для контролю відстані між елементами */
+    gap: 10px;
   }
   
 
-/* Title styles */
 .section-title {
   font-size: 28px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 5px;
+  margin-top: 10%;
   text-align: center;
+  width: 100%;
+  margin-bottom: 5%;
   font-family: 'Exo 2';
 }
 
 .section-subtitle {
-  font-size: 22px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 5px;
-  text-align: center;
-  font-family: 'Exo 2';
+  margin-bottom: 10%;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Exo 2';
 }
 
-/* Packages grid styles */
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Два стовпці */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 10px;
   width: 100%;
-  max-width: 900px; /* Обмежуємо максимальну ширину сітки */
+  max-width: 900px; 
 }
 
 .package-card {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   width: 100%;
@@ -76,21 +78,18 @@ body {
   border: 2px solid #003366;
 }
 
-/* Перший пакет займає весь перший ряд */
 .package-card:first-child {
-  grid-column: span 2; /* Займає два стовпці */
+  grid-column: span 2; 
   width: 100%;
   max-width: 100%;
 }
 
-/* Два інші пакети розташовуються на другому ряді */
 .package-card:nth-child(2),
 .package-card:nth-child(3) {
   width: 100%;
   max-width: 100%;
 }
 
-/* Additional services styles */
 .additional-services-container {
   display: flex;
   flex-direction: column;
@@ -99,12 +98,7 @@ body {
   align-items: center;
 }
 
-.additional-service-item {
-  width: 100%;
-  max-width: 600px;
-}
 
-/* Cart container styles */
 .cart-container {
   margin-top: 20px;
   padding: 20px;
@@ -129,7 +123,6 @@ body {
   margin-top: 20px;
 }
 
-/* Modal styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -147,27 +140,23 @@ body {
   background: white;
   padding: 30px;
   border-radius: 10px;
-  width: 400px;
   max-width: 90%;
-  max-height: 80vh;
   overflow-y: auto;
   text-align: center;
   z-index: 1001;
 }
 
 .modal-content button {
+  display: none;
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #003366;
+  background-color: #fff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.modal-content button:hover {
-  background-color: #00ccff;
-}
 
 @media (max-width: 768px) {
   .container {
@@ -176,10 +165,26 @@ body {
 
   .section-title {
     font-size: 24px;
+    margin-bottom: 10%;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Exo 2';
   }
 
   .section-subtitle {
     font-size: 20px;
+    margin-bottom: 10%;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Exo 2';
   }
 
   .package-card {
@@ -199,7 +204,6 @@ body {
     font-size: 16px;
   }
 
-  /* На малих екранах пакети відображаються один під одним */
   .packages-grid {
     grid-template-columns: 1fr;
   }
@@ -209,7 +213,6 @@ body {
   }
 }
 
-/* Additional services styles */
 .additional-services-container {
   display: flex;
   flex-direction: column;
@@ -228,7 +231,6 @@ body {
   background: white;
   border-radius: 10px;
   padding: 15px 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 

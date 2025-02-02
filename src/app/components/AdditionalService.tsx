@@ -19,7 +19,6 @@ interface AdditionalServiceProps {
 
 const AdditionalService: React.FC<AdditionalServiceProps> = ({ service, isSelected, onSelect, onInfoClick }) => {
   return (
-    <div className="glass-card service-card">
       <div className="service-content">
         <div className="service-info">
           <div className={`service-indicator ${isSelected ? 'selected' : ''}`} />
@@ -27,7 +26,7 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({ service, isSelect
           {service.info && (
             <Dialog>
               <DialogTrigger asChild>
-                <button className="info-button" onClick={onInfoClick}>ⓘ</button>
+                <button className="info-button" onClick={onInfoClick}><img src="./images/info.png"/></button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
@@ -40,15 +39,15 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({ service, isSelect
         </div>
         <div className="service-actions">
           <span className="service-price">${service.price}</span>
-          <Button
+          <Button className='button2choose'
             variant={isSelected ? "secondary" : "default"}
             onClick={() => onSelect(service.id)}
           >
-            {isSelected ? 'Вибрано' : 'Вибрати'}
+            {isSelected ? 'Обрано' : 'Обрати'}
           </Button>
         </div>
       </div>
-    </div>
+   
   );
 };
 

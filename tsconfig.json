@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/store/cartSlice.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/store/cartSlice.jsx", "src/app/components/Footer/Footer.jsx", "src/app/components/Footer.jsx"],
   "exclude": ["node_modules"]
 }

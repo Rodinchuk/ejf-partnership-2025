@@ -26,20 +26,26 @@
 .cardcontainer {
   display: flex;
   flex-direction: column;
-  gap: 1px;
-  width: 60%;
+  align-items: center;
+  width: 100%;
   max-width: 450px;
 }
 
 /* Стилі для карток */
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   border-radius: 24px;
   padding: 15px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   border: 3px solid #257BFC;
-  max-height: 100px;;
+  width: 100%;
+  max-width: 450px;
+  min-height: 100px;
 }
 
 .card:hover {
@@ -52,9 +58,13 @@
 
 .card-collapsed {
   background-color: #fff;
-  max-height: 100px;
+  min-height: 100px;
   margin-bottom: 0%;
-  gap:0;
+  gap: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Заголовок картки */
@@ -62,6 +72,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .card-icon img {
@@ -79,7 +90,6 @@
 /* Кнопка перемикання */
 .card-toggle {
   transition: transform 0.3s;
- 
 }
 
 .card-toggle img {
@@ -106,7 +116,8 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 455px; 
+  width: 100%;
+  max-width: 450px;
   align-items: center;
 }
 
@@ -124,14 +135,14 @@
 
   .cardcontainer {
     width: 100%;
-    order: 2; 
+    order: 2;
   }
 
   .pictures {
     width: 100%;
     flex-direction: column;
     gap: 10px;
-    order: 1; 
+    order: 1;
   }
 
   .pictures img {

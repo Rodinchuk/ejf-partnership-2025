@@ -54,7 +54,7 @@ export default function Contacts() {
       <div className={styles.carousel}>
         {isMobile && (
           <button className={styles.arrow} onClick={prevContact}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="24" height="24"  z-index="5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
@@ -82,12 +82,12 @@ export default function Contacts() {
               </p>
               <p className={`${styles.contactInfo} ${contact.special ? styles.specialText : ""}`}>
                 {contact.special ? (
-              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="14" z-index="5" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" clipRule="evenodd" d="M2.33398 2.1849H11.6673C11.9248 2.1849 12.1482 2.33087 12.2593 2.54459L7.37046 5.80379C7.14653 5.95308 6.85479 5.95308 6.63086 5.80379L1.74205 2.54458C1.8531 2.33087 2.0765 2.1849 2.33398 2.1849ZM1.66732 4.09723V9.51823C1.66732 9.88642 1.96579 10.1849 2.33398 10.1849H11.6673C12.0355 10.1849 12.334 9.88642 12.334 9.51823V4.09724L8.11006 6.91319C7.43826 7.36105 6.56306 7.36105 5.89126 6.91319L1.66732 4.09723ZM0.333984 2.85156C0.333984 1.74699 1.22942 0.851562 2.33398 0.851562H11.6673C12.7719 0.851562 13.6673 1.74699 13.6673 2.85156V9.51823C13.6673 10.6228 12.7719 11.5182 11.6673 11.5182H2.33398C1.22941 11.5182 0.333984 10.6228 0.333984 9.51823V2.85156Z" fill="#DBEBFF"/>
               </svg>
               
                 ) : (
-                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="14"  z-index="5" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" clipRule="evenodd" d="M2.33301 2.1849H11.6663C11.9238 2.1849 12.1472 2.33087 12.2583 2.54459L7.36948 5.80379C7.14555 5.95308 6.85382 5.95308 6.62988 5.80379L1.74107 2.54458C1.85213 2.33087 2.07552 2.1849 2.33301 2.1849ZM1.66634 4.09723V9.51823C1.66634 9.88642 1.96482 10.1849 2.33301 10.1849H11.6663C12.0345 10.1849 12.333 9.88642 12.333 9.51823V4.09724L8.10908 6.91319C7.43728 7.36105 6.56208 7.36105 5.89028 6.91319L1.66634 4.09723ZM0.333008 2.85156C0.333008 1.74699 1.22844 0.851562 2.33301 0.851562H11.6663C12.7709 0.851562 13.6663 1.74699 13.6663 2.85156V9.51823C13.6663 10.6228 12.7709 11.5182 11.6663 11.5182H2.33301C1.22844 11.5182 0.333008 10.6228 0.333008 9.51823V2.85156Z" fill="#0C0C12"/>
                     </svg>
                     
