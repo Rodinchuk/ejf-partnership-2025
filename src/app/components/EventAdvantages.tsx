@@ -45,10 +45,10 @@ const EventAdvantages: React.FC = () => {
       icon: "./images/adv_brand.png",
     },
     {
-      title: "Отримаєте можливості для просування Вашого бренду",
+      title: "Дізнаєтесь очікування молоді щодо ринку праці",
       description:
-        "Інтерактивні активності, такі як Share and Win, Treasure Hunt та інші, дозволять залучити аудиторію до взаємодії з Вашим брендом у соцмережах та збільшать впізнаваність серед молоді.",
-      icon: "./images/adv_promo.png",
+        "Участь у різноманітних воркшопах та панельних дискусіях, допоможе Вам краще зрозуміти потреби сучасної молоді. Це сприятиме ефективній співпраці зі студентами у майбутньому.",
+      icon: "./images/adv_expectations.png",
     },
     {
       title: "Розширите мережу контактів",
@@ -56,12 +56,14 @@ const EventAdvantages: React.FC = () => {
         "Наш захід – це платформа для знайомств з представниками інших компаній та встановлення нових партнерських відносин.",
       icon: "./images/adv_web.png",
     },
+    
     {
-      title: "Дізнаєтесь очікування молоді щодо ринку праці",
+      title: "Отримаєте можливості для просування Вашого бренду",
       description:
-        "Участь у різноманітних воркшопах та панельних дискусіях, допоможе Вам краще зрозуміти потреби сучасної молоді. Це сприятиме ефективній співпраці зі студентами у майбутньому.",
-      icon: "./images/adv_expectations.png",
+        "Інтерактивні активності, такі як Share and Win, Treasure Hunt та інші, дозволять залучити аудиторію до взаємодії з Вашим брендом у соцмережах та збільшать впізнаваність серед молоді.",
+      icon: "./images/adv_promo.png",
     },
+   
     {
       title: "Інвестуєте у майбутнє та амбітну молодь",
       description:
@@ -75,13 +77,8 @@ const EventAdvantages: React.FC = () => {
       <h2 className="h2">Переваги для Вас</h2>
       <div className="container">
         <div className="cards-container">
-          {cardsData.slice(0, 3).map((card, index) => (
+          {cardsData.map((card, index) => (
             <ExpandableCard key={index} {...card} />
-          ))}
-        </div>
-        <div className="cards-container">
-          {cardsData.slice(3, 6).map((card, index) => (
-            <ExpandableCard key={index + 3} {...card} />
           ))}
         </div>
         <img src="./images/lupkaZalupka.png" className="overlay-image" alt="overlay" />
