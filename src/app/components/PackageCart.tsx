@@ -12,8 +12,6 @@ import {
 } from "./ui/dialog";
 import Image from 'next/image'; // Імпортуємо Image з next/image
 import "@/app/components/PackageCart.css";
-import { audio } from 'framer-motion/client';
-
 interface PackageCardProps {
   pkg: Package;
   isSelected: boolean;
