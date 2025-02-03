@@ -18,38 +18,42 @@ interface AdditionalServiceProps {
   onInfoClick?: () => void;
 }
 
-const AdditionalService: React.FC<AdditionalServiceProps> = ({ service, isSelected, onSelect, onInfoClick }) => {
+const AdditionalService: React.FC<AdditionalServiceProps> = ({ service, isSelected, onSelect }) => {
   return (
-      <div className="service-content">
-         <Button 
-            variant={isSelected ? "secondary" : "default"}
-            onClick={() => onSelect(service.id)}
-          >
-       
-       <div className={`service-indicator ${isSelected ? 'selected' : ''}`} />
-          </Button>
-        <div className="service-info">
-          <span>{service.name}</span>
-          {service.info && (
-            <Dialog>
-              <DialogTrigger asChild>
-                <button className="info-button" onClick={onInfoClick}><Image src="/images/info.png" alt="Information icon" width={24} height={24} /></button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>{service.name}</DialogTitle>
-                  <DialogDescription>{service.info}</DialogDescription>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
-          )}
-        </div>
-        <div className="service-actions">
-          <span className="service-price">${service.price}</span>
-         
-        </div>
+    <div className="service-content">
+      <div className="service-indicator-wrapper">
+        <Button 
+          variant={isSelected ? "secondary" : "default"}
+          onClick={() => onSelect(service.id)}
+        >
+          Select
+        </Button>
+        <div className={`service-indicator ${isSelected ? 'selected' : ''}`} />
       </div>
-   
+
+      <div className="service-info">
+        <span>{service.name}</span>
+        {service.info && (
+          <Dialog>
+            <DialogTrigger asChild>
+              <button className="info-button">
+                <Image src="/images/info.png" alt="Information icon" width={24} height={24} />
+              </button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>{service.name}</DialogTitle>
+                <DialogDescription>{service.info}</DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
+        )}
+      </div>
+
+      <div className="service-actions">
+        <span className="service-price">${service.price}</span>
+      </div>
+    </div>
   );
 };
 
