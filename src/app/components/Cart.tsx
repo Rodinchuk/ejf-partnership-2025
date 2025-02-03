@@ -1,3 +1,5 @@
+// components/Cart.tsx
+
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -57,10 +59,10 @@ const Cart: React.FC<CartProps> = ({
         "nH1slg9lPzjgOixSC"
       );
 
-      // Toast removed
+      alert("Дякуємо! Ми зв'яжемося з вами найближчим часом.");
     } catch (error) {
       console.error("Email sending error:", error);
-      // Toast removed
+      alert("Помилка! Щось пішло не так. Спробуйте ще раз.");
     }
   };
 
@@ -94,10 +96,7 @@ const Cart: React.FC<CartProps> = ({
             <span>{service.name}</span>
             <div className="cart-item-actions">
               <span>${service.price}</span>
-              <button
-                data-variant="ghost"
-                onClick={() => onRemove(service.id)}
-              >
+              <button data-variant="ghost" onClick={() => onRemove(service.id)}>
                 ✕
               </button>
             </div>
