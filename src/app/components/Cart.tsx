@@ -70,7 +70,8 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
         description: "Щось пішло не так. Спробуйте ще раз.",
         variant: "destructive"
       });
-    }    
+    }
+    
   };
 
   const total = calculateTotal();
