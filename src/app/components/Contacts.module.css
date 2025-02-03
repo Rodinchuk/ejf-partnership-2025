@@ -1,136 +1,79 @@
 .container {
-    padding: 20px;
+    padding-bottom: 120px;
 }
 
 .carousel {
     position: relative;
-    padding: 5% 5%;
 }
 
 .cardContainer {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 25px;
 }
 
 .card {
-    width: auto;
+    flex: 1;
+    max-width: 30%;
     height: auto;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     position: relative;
     text-align: center;
-    overflow: visible; 
-    border: 3px solid #111A94
-}
-
-
-.card img {
-    width: 340px; 
-    height: 340px;
-    object-fit:contain;
-    position: absolute;
-    top: -50%; 
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
+    overflow: visible;
+    border: 3px solid #111A94;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card .content {
-    margin-top: 80px; 
-    align-items: center;/* Зсуває текст вниз, щоб він не заходив на зображення */
+    margin-top: 120px;
+    align-items: center;
+    word-wrap: break-word;
 }
 
 .name {
-    margin-top: 180px;
     font-size: 1.5rem;
     font-weight: bold;
     color: #257BFC;
+    margin-top: 150px;
 }
 
 .role {
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top: 1%;
     color: #666;
     margin-bottom: 10px;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .contactInfo {
     font-size: 0.9rem;
     color: #333;
     margin-top: 10px;
-    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+    margin-bottom: 5%;
 }
 
 .hidden {
     display: none;
 }
 
-@media (max-width: 768px) {
-    
-    .title {
-        margin-bottom: 20%;
-        color: #257BFC;
-        font-size: 3rem;
-        font-weight: bold;
-        text-align: center;
-        width: 100%;
-        font-family: 'Exo 2';
-    }
-    .cardContainer {
-        display: block;
-        align-items: center;
-    }
-
-    .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: transparent;
-        border: none;
-        cursor: pointer;
-    }
-
-    .arrow:first-of-type {
-        left: 0;
-    }
-
-    .arrow:last-of-type {
-        right: 0;
-    }
-    
-.specialCard {
-    background: linear-gradient(180deg, #257BFC, #111A94);
-    padding: 20px;
-    color: white;
+.title {
+    margin-bottom: 20%;
+    color: #257BFC;
+    font-size: 3rem;
+    font-weight: bold;
     text-align: center;
-    border: none;
-    transform: none;
-  }
-  .card img {
-    width: 270; 
-    height: 270;
-    object-fit:contain;
-    position: absolute;
-    top: -35%; 
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-   
+    width: 100%;
+    font-family: 'Exo 2';
 }
-}
-@media (max-width: 480px){
-    
-.specialCard {
-    background: linear-gradient(180deg, #257BFC, #111A94);
-    padding: none;
-    color: white;
-    text-align: center;
-    border: none;
-    transform: none;
-}
-}
-
 
 .specialCard {
     background: linear-gradient(180deg, #257BFC, #111A94);
@@ -139,55 +82,23 @@
     text-align: center;
     border: none;
     transform: translateY(5%);
-  }
-  
-  .image {
-    width: 340px;
-    height: 340px;
-    border-radius: 50%;
-    margin-bottom: 5%;
-  }
-  
-  .name {
-    font-size: 20px;
-    font-weight: bold;
-    
-    margin-bottom: 5%;
-  }
-  
-  .role {
-    font-size: 16px;
-    font-style: italic;
-    margin-bottom: 5%;
-  }
-  
-    .divider {
-        width: 80%;
-        height: 0.5px;
-        background: white;
-        margin: 10px auto; /* Центрує елемент */
-        border-radius: 50px;
-        margin-bottom: 5%;
-      }
-      
-  
-  
-  .contactInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5%;
-  }
+}
 
-  
-  .specialText {
-    color: #DBEBFF; /* Наприклад, інший відтінок */
+.divider {
+    width: 80%;
+    height: 0.5px;
+    background: white;
+    margin: 10px auto;
+    border-radius: 50px;
+    margin-bottom: 5%;
+}
+
+.specialText {
+    color: #DBEBFF;
     font-weight: bold;
-  }
-  .arrow {
+}
+
+.arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -200,6 +111,7 @@
     border-radius: 50%;
     z-index: 10;
 }
+
 .arrow:first-of-type {
     left: 10px;
 }
@@ -209,7 +121,48 @@
 }
 
 .card img {
-    width: 200px;
-    height: 200px;
-    top: -20%;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    margin-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+    .title {
+        margin-bottom: 40%;
+        font-size: 2.5rem;
+    }
+
+    .role {
+        font-size: 0.9rem;
+        margin-top: 30px;
+    }
+
+    .cardContainer {
+        display: block;
+        margin-bottom: 30%;
+    }
+
+    .card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        width: 200px;
+        height: 200px;
+        top: -20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card img {
+        width: 200px;
+        height: 200px;
+    }
 }

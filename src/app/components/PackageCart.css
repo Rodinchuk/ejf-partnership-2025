@@ -4,19 +4,18 @@
     flex-direction: column;
     justify-content: space-between;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
     padding: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
     max-width: 300px;
-    width: 100%;
+    width: 80%;
   }
   
   .package-card.selected {
-    border-color: #2563eb; /* Синя рамка для вибраного пакету */
-    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.5);
-    transform: scale(1.02);
+    background-color: linear-gradient(180deg, #1d4ed8);
+    border: 9px solid #111A94;
+    border-radius: 24px;
   }
   
   .package-header {
@@ -27,15 +26,15 @@
   }
   
   .package-header h3 {
-    font-size: 1.5rem;
+    font-size: 40px;
     font-weight: bold;
-    color: #1e3a8a; /* Темно-синій */
+    color: #000000; /* Темно-синій */
     margin: 0;
   }
   
   .package-header .price {
-    font-size: 1.25rem;
-    color: #4b5563; /* Сірий */
+    font-size: 32px;
+    color: #257BFC; 
     font-weight: 600;
     margin: 0;
   }
@@ -61,40 +60,46 @@
   .feature-list li {
     display: flex;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #374151; /* Темно-сірий */
     margin-bottom: 8px;
   }
   
   .feature-list .bullet {
-    color: #2563eb; /* Синій */
-    font-size: 1.25rem;
-    margin-right: 8px;
+    display: inline-block;       
+    width: 5px;              
+    height: 5px;            
+    color: #2563eb;   
+    transform: rotate(45deg);    
+    margin-right: 8px;           
   }
   
   .basic-note {
-    font-size: 0.9rem;
-    color: #6b7280; /* Сірий */
+    font-size: 1.2rem;
+    color: #0C0C1266;
     font-weight: 500;
     text-align: center;
     padding: 8px 0;
-    background: #f9fafb;
+    background: none;
     border-radius: 8px;
   }
   
-  button {
+  .cartbutton {
     cursor: pointer;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     padding: 10px 16px;
-    transition: background 0.3s ease;
+    
+    
+    background: linear-gradient(180deg, #257BFC,#111A94);
+    color:#e6e6e6;
   }
   
   button.default {
-    background: #2563eb; /* Синій */
-    color: white;
+    background: #fff; /* Синій */
+    color: #2563eb;
   }
   
   button.default:hover {
@@ -102,7 +107,7 @@
   }
   
   button.secondary {
-    background: #e5e7eb; /* Світло-сірий */
+    background: #1e3a8a; /* Світло-сірий */
     color: #1e3a8a; /* Темно-синій */
   }
   

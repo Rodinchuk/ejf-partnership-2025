@@ -102,7 +102,8 @@ const PackagesSection = () => {
     <section  className="packages-section">
       <div className="container">
         <h2 id="partnership"  className="section-title">Пакети пропозицій</h2>
-
+         <img src="./images/bigballs1.png" className='bigballs1'/>
+         <img src="./images/bigballs2.png" className='bigballs2'/>
         <div className="packages-grid">
           <PackageCard
             pkg={packages[0]}

@@ -8,14 +8,14 @@ const contacts = [
     role: "відповідальна за корпоративні зв’язки",
     phone: "+380 98 600 4363",
     email: "sonyagerusbest@gmail.com",
-    image: "/images/contacts.jpg",
+    image: "/images/sofia.png",
   },
   {
     name: "Максим Сеньків",
     role: "головний організатор",
     phone: "+380 66 638 5322",
     email: "maksym.senkivv@gmail.com",
-    image: "/images/contacts.jpg",
+    image: "/images/max.png",
     special: true,
   },
   {
@@ -23,7 +23,7 @@ const contacts = [
     role: "відповідальна за корпоративні зв’язки",
     phone: "+380 68 978 4955",
     email: "dianasr.best@gmail.com",
-    image: "/images/contacts.jpg",
+    image: "/images/diana.png",
   },
 ];
 
@@ -63,6 +63,7 @@ export default function Contacts() {
           {contacts.map((contact, index) => (
             <div key={contact.name} className={`${styles.card} ${contact.special ? styles.specialCard : ""} ${isMobile && index !== currentIndex ? styles.hidden : ""}`}>
               <img src={contact.image} alt={contact.name} className={styles.image} />
+        
               <h3 className={`${styles.name} ${contact.special ? styles.specialText : ""}`}>{contact.name}</h3>
               <p className={`${styles.role} ${contact.special ? styles.specialText : ""}`}>{contact.role}</p>
               <hr className={styles.divider} />

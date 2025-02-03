@@ -48,7 +48,7 @@ const SocialMediaFollowers = () => {
     const buttonRect = event.target.getBoundingClientRect();
     setModalPosition({
       top: buttonRect.top + window.scrollY + 10,
-      left: buttonRect.left + window.scrollX + (isMobile ? -300 : -112),
+      left: buttonRect.left + window.scrollX + (isMobile ? -200 : -90),
     });
     setShowModal(!showModal);
   };

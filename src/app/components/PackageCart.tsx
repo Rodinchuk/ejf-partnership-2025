@@ -51,18 +51,17 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
         ))}
       </ul>
       {!isBasic && (
-        <Button
+        <Button className='cartbutton'
           variant={isSelected ? "secondary" : "default"}
           onClick={() => onSelect(pkg.id)}
         >
-          {isSelected ? 'Вибрано' : 'Вибрати'}
+          {isSelected ? 'Прибрати з кошика' : 'У кошик'}
         </Button>
       )}
       {isBasic && (
         <div className="basic-note">
           Обов'язковий пакет
-        </div>
-      )}
+        </div> )}
     </div>
   );
 };
