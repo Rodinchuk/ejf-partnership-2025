@@ -1,16 +1,13 @@
-"use client";
-import React, { useState } from 'react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Package, AdditionalService } from '../types/types';
-import emailjs from '@emailjs/browser';
+// components/Cart.tsx
 
-emailjs.init('nH1slg9lPzjgOixSC');
+import React, { useState } from "react";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Package, AdditionalService } from "../types/types";
+import emailjs from "@emailjs/browser";
+import { toast } from "./ui/use-toast";
 
-import { toast } from './ui/use-toast';
-import '@/app/components/Cart.css';
-
-
+emailjs.init("nH1slg9lPzjgOixSC");
 
 interface CartProps {
   selectedPackages: Package[];
@@ -18,9 +15,13 @@ interface CartProps {
   onRemove: (id: string) => void;
 }
 
-const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRemove }) => {
-  const [companyName, setCompanyName] = useState('');
-  const [email, setEmail] = useState('');
+const Cart: React.FC<CartProps> = ({
+  selectedPackages,
+  additionalServices,
+  onRemove,
+}) => {
+  const [companyName, setCompanyName] = useState("");
+  const [email, setEmail] = useState("");
 
   const calculateTotal = () => {
     const baseTotal = [...selectedPackages, ...additionalServices].reduce(
@@ -47,16 +48,16 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
       const templateParams = {
         company_name: companyName,
         email: email,
-        packages: selectedPackages.map(p => p.name).join(', '),
-        additional_services: additionalServices.map(s => s.name).join(', '),
-        total: calculateTotal()
+        packages: selectedPackages.map((p) => p.name).join(", "),
+        additional_services: additionalServices.map((s) => s.name).join(", "),
+        total: calculateTotal(),
       };
 
       await emailjs.send(
-        'service_7xshe0s',
-        'template_lap52fe',
+        "service_7xshe0s",
+        "template_lap52fe",
         templateParams,
-        'nH1slg9lPzjgOixSC'
+        "nH1slg9lPzjgOixSC"
       );
 
       toast({
@@ -68,10 +69,8 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
       toast({
         title: "Помилка!",
         description: "Щось пішло не так. Спробуйте ще раз.",
-        variant: "destructive"
       });
     }
-    
   };
 
   const total = calculateTotal();
@@ -84,18 +83,14 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
   return (
     <div>
       <h2>Кошик</h2>
-      
       <div className="form-group">
-        {selectedPackages.map(pkg => (
+        {selectedPackages.map((pkg) => (
           <div key={pkg.id} className="cart-item">
             <span>{pkg.name}</span>
             <div className="cart-item-actions">
               <span>${pkg.price}</span>
-              {pkg.name !== 'Basic' && (
-                <button
-                  data-variant="ghost"
-                  onClick={() => onRemove(pkg.id)}
-                >
+              {pkg.name !== "Basic" && (
+                <button data-variant="ghost" onClick={() => onRemove(pkg.id)}>
                   ✕
                 </button>
               )}
@@ -103,7 +98,7 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
           </div>
         ))}
 
-        {additionalServices.map(service => (
+        {additionalServices.map((service) => (
           <div key={service.id} className="cart-item">
             <span>{service.name}</span>
             <div className="cart-item-actions">
@@ -123,9 +118,7 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
         <div className="total-row">
           <span>Загальна сума:</span>
           <div className="total-amount">
-            {hasDiscount && (
-              <span className="strikethrough">${originalTotal}</span>
-            )}
+            {hasDiscount && <span className="strikethrough">${originalTotal}</span>}
             <span className="final-price">${total}</span>
           </div>
         </div>

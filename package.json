@@ -12,6 +12,7 @@
     "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-dialog": "^1.1.5",
     "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-toast": "^1.2.5",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-query": "^5.66.0",
     "amqplib": "^0.10.5",
