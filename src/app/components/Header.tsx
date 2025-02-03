@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import styles from '@/app/components/Header.module.css';
-import Link from 'next/link';
+import Image from 'next/image'; // Import Image for optimization
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,25 +13,28 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
   const scrollToPartnership = () => {
     document.getElementById("partnership")?.scrollIntoView({ behavior: "smooth" });
   };
+
   const scrollToHome = () => {
     document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
   };
-  
 
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-          <img
-            onClick={scrollToHome}
-            src="./images/logoWhite.png"
-            alt="Logo"
-            className={styles.logo}
-            onMouseEnter={(e) => e.currentTarget.classList.add(styles.spin)}
-            onMouseLeave={(e) => e.currentTarget.classList.remove(styles.spin)}
-          />
+        <Image
+          onClick={scrollToHome}
+          src="/images/logoWhite.png" // Make sure this path is correct for Next.js
+          alt="Logo"
+          width={50} // Adjust width
+          height={50} // Adjust height
+          className={styles.logo}
+          onMouseEnter={(e) => e.currentTarget.classList.add(styles.spin)}
+          onMouseLeave={(e) => e.currentTarget.classList.remove(styles.spin)}
+        />
       </div>
       <nav className={styles.nav}>
         <ul className={styles.navList}>

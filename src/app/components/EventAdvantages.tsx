@@ -80,7 +80,7 @@ const EventAdvantages: React.FC = () => {
             <ExpandableCard key={index} {...card} />
           ))}
         </div>
-        <Image src="/images/lupkaZalupka.png" className="overlay-image" alt="overlay" width={500} height={500} />
+        <Image src="/images/lupkaZalupka.png" className="overlay-image" alt="overlay" width={500} height={400} />
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import Image from 'next/image'; // Імпортуємо Image з next/image
 import "@/app/components/PackageCart.css";
 
 interface PackageCardProps {
@@ -31,7 +32,9 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
         {pkg.info && (
           <Dialog>
             <DialogTrigger asChild>
-              <button className="info-button" onClick={onInfoClick}><img src="./images/info.png"/></button>
+              <button className="info-button" onClick={onInfoClick}>
+                <Image src="/images/info.png" alt="Package information" /> {/* Замінили img на Image */}
+              </button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
@@ -60,8 +63,9 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
       )}
       {isBasic && (
         <div className="basic-note">
-          Обов'язковий пакет
-        </div> )}
+          Обов&apos;язковий пакет {/* Виправлено одинарні лапки */}
+        </div>
+      )}
     </div>
   );
 };
