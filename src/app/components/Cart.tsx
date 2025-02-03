@@ -1,11 +1,8 @@
-// components/Cart.tsx
-
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Package, AdditionalService } from "../types/types";
 import emailjs from "@emailjs/browser";
-import { toast } from "./ui/use-toast";
 
 emailjs.init("nH1slg9lPzjgOixSC");
 
@@ -60,16 +57,10 @@ const Cart: React.FC<CartProps> = ({
         "nH1slg9lPzjgOixSC"
       );
 
-      toast({
-        title: "Дякуємо!",
-        description: "Ми зв'яжемося з вами найближчим часом.",
-      });
+      // Toast removed
     } catch (error) {
       console.error("Email sending error:", error);
-      toast({
-        title: "Помилка!",
-        description: "Щось пішло не так. Спробуйте ще раз.",
-      });
+      // Toast removed
     }
   };
 
