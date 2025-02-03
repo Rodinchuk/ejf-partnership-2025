@@ -9,10 +9,7 @@ export default function CareerFairBanner() {
           src="./images/briefcase.png" 
           className={styles.briefcase}
         />
-      <img 
-          src="./images/bubbles.png" 
-          className={styles.bubbles}
-        />
+     
       </div>
      
         <h1 className={styles.title}>Інженерний</h1>
