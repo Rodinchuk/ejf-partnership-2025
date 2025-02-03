@@ -1,0 +1,61 @@
+/* Загальні стилі для optionButton */
+.optionButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    width: 80%;             /* Ширина 80% від контейнера */
+    margin: 0 auto;         /* Центрування кнопки */
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 24px;    /* border-radius 24px */
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Стилі для вимкненої кнопки */
+  .optionButton:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  /* Стилі для SVG-іконок всередині optionButton */
+  .optionButton svg {
+    pointer-events: none;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+  
+  /* Варіант "default" */
+  .optionButton-default {
+    background-color: #3b82f6; /* Основний синій фон */
+    color: #ffffff;
+  }
+  
+  .optionButton-default:hover {
+    background-color: #2563eb;
+  }
+  
+  .optionButton-default:focus {
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
+  }
+  
+  /* Варіант "secondary" */
+  .optionButton-secondary {
+    background-color: #e5e7eb; /* Світло-сірий фон */
+    color: #374151;
+  }
+  
+  .optionButton-secondary:hover {
+    background-color: #d1d5db;
+  }
+  
+  .optionButton-secondary:focus {
+    box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.5);
+  }
+  

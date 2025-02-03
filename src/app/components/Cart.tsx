@@ -4,6 +4,9 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Package, AdditionalService } from '../types/types';
 import emailjs from '@emailjs/browser';
+
+emailjs.init('nH1slg9lPzjgOixSC');
+
 import { toast } from './ui/use-toast';
 import '@/app/components/Cart.css';
 
@@ -50,14 +53,14 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_7xshe0s',
+        'template_lap52fe',
         templateParams,
-        'YOUR_PUBLIC_KEY'
+        'nH1slg9lPzjgOixSC'
       );
 
       toast({
-        title: "Замовлення відправлено!",
+        title: "Дякуємо!",
         description: "Ми зв'яжемося з вами найближчим часом.",
       });
     } catch (error) {

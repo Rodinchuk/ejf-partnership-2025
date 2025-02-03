@@ -99,11 +99,11 @@ const PackagesSection = () => {
   };
 
   return (
-    <section  className="packages-section">
+    <div  className="packages-section">
       <div className="container">
         <h2 id="partnership"  className="section-title">Пакети пропозицій</h2>
-         <img src="./images/bigballs1.png" className='bigballs1'/>
-         <img src="./images/bigballs2.png" className='bigballs2'/>
+         {/* <img src="./images/bigballs1.png" className='bigballs1'/>
+         <img src="./images/bigballs2.png" className='bigballs2'/> */}
         <div className="packages-grid">
           <PackageCard
             pkg={packages[0]}
@@ -124,6 +124,7 @@ const PackagesSection = () => {
         </div>
 
         <h3 className="section-subtitle">Додаткові опції</h3>
+
 
         <div className="additional-services-container">
           {additionalServices.map(service => (
@@ -150,7 +151,7 @@ const PackagesSection = () => {
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 };
 

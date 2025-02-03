@@ -19,13 +19,15 @@ interface AdditionalServiceProps {
 
 const AdditionalService: React.FC<AdditionalServiceProps> = ({ service, isSelected, onSelect, onInfoClick }) => {
   return (
-    <Button 
-    variant={isSelected ? "secondary" : "default"}
-    onClick={() => onSelect(service.id)}
-  >
       <div className="service-content">
+         <Button 
+            variant={isSelected ? "secondary" : "default"}
+            onClick={() => onSelect(service.id)}
+          >
+       
+       <div className={`service-indicator ${isSelected ? 'selected' : ''}`} />
+          </Button>
         <div className="service-info">
-          <div className={`service-indicator ${isSelected ? 'selected' : ''}`} />
           <span>{service.name}</span>
           {service.info && (
             <Dialog>
@@ -44,11 +46,9 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({ service, isSelect
         <div className="service-actions">
           <span className="service-price">${service.price}</span>
          
-            {isSelected ? '' : ''}
-        
         </div>
       </div>
-      </Button>
+   
   );
 };
 
