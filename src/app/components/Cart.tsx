@@ -64,12 +64,13 @@ const Cart: React.FC<CartProps> = ({ selectedPackages, additionalServices, onRem
         description: "Ми зв'яжемося з вами найближчим часом.",
       });
     } catch (error) {
+      console.error("Email sending error:", error);
       toast({
         title: "Помилка!",
         description: "Щось пішло не так. Спробуйте ще раз.",
         variant: "destructive"
       });
-    }
+    }    
   };
 
   const total = calculateTotal();

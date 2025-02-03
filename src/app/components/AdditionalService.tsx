@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './ui/button';
+import Image from "next/image";
 import { AdditionalService as ServiceType } from '../types/types';
 import {
   Dialog,
@@ -32,7 +33,7 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({ service, isSelect
           {service.info && (
             <Dialog>
               <DialogTrigger asChild>
-                <button className="info-button" onClick={onInfoClick}><img src="./images/info.png"/></button>
+                <button className="info-button" onClick={onInfoClick}><Image src="/images/info.png" alt="Information icon" width={24} height={24} /></button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
