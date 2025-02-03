@@ -12,6 +12,7 @@ import {
 } from "./ui/dialog";
 import Image from 'next/image'; // Імпортуємо Image з next/image
 import "@/app/components/PackageCart.css";
+import { audio } from 'framer-motion/client';
 
 interface PackageCardProps {
   pkg: Package;
@@ -33,7 +34,7 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
           <Dialog>
             <DialogTrigger asChild>
               <button className="info-button" onClick={onInfoClick}>
-                <Image src="/images/info.png" alt="Package information" /> {/* Замінили img на Image */}
+                <Image src="/images/info.png" alt="Package information" width={20} height={20} /> {/* Замінили img на Image */}
               </button>
             </DialogTrigger>
             <DialogContent>
