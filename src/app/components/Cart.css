@@ -83,7 +83,6 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-    transition: background 0.3s ease;
 }
 
 .submit-button:hover {

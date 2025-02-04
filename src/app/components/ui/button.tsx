@@ -40,7 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, style, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     const inlineStyles: React.CSSProperties = {
-      backgroundColor: "none",
+      backgroundColor: "#fff",
       border: "none",
       ...style, 
     }

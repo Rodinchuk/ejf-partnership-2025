@@ -24,14 +24,16 @@
     margin-bottom: 2rem;
   }
   
-  .button {
+  .conclusionbutton {
     background: white;
     color: #1e3a8a;
-    font-size: 1.2rem;
+    font-size: 3rem;
     font-weight: bold;
     padding: 1rem 2rem;
-    border-radius: 50px;
+    border-radius: 15px;
     border: none;
+    width: 65lvh;
+    height: 10lvh;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
   }

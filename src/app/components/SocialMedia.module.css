@@ -151,10 +151,11 @@
       border-radius: 16px;
       display: flex;
       text-align: left;
-      margin: px;
+      margin-bottom: 3%;
       background: linear-gradient(180deg, #fff, #fff);
       border: 3px  solid  #257bfc;
     color: #257bfc;
+
 
     }
   

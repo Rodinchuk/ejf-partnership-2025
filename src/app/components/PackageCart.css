@@ -137,4 +137,11 @@
   button.secondary:hover {
     background: #d1d5db; /* Трохи темніше сірий */
   }
-  
+  @media (max-width: 768px) {
+  .cartbutton.selected{
+    background: #ffffff;
+    border:1px solid#257BFC;
+    color: #257BFC;
+    height: 110%;
+  }
+  }
