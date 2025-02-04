@@ -32,7 +32,7 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
           <Dialog>
             <DialogTrigger asChild>
               <button className="info-button" onClick={onInfoClick}>
-                <Image src="/images/info.png" alt="Package information" width={20} height={20} /> {/* Замінили img на Image */}
+                <Image src="/images/info.png" alt="Package information" width={20} height={20} /> 
               </button>
             </DialogTrigger>
             <DialogContent>
@@ -53,16 +53,19 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
         ))}
       </ul>
       {!isBasic && (
-        <Button className='cartbutton'
-          variant={isSelected ? "secondary" : "default"}
-          onClick={() => onSelect(pkg.id)}
-        >
-          {isSelected ? 'Прибрати з кошика' : 'У кошик'}
-        </Button>
+    <div className='package-card-footer'><Button
+    className={`cartbutton ${isSelected ? "selected" : ""}`}
+    variant={isSelected ? "secondary" : "default"}
+    onClick={() => onSelect(pkg.id)}
+  ><Image className={`cartsvg ${isSelected ? "selected" : ""}`} src="/images/cart.svg" alt="cartsvg" width={20} height={20} /> 
+
+    {isSelected ? "Прибрати з кошика" : "У кошик"}
+  </Button></div>
+  
       )}
       {isBasic && (
         <div className="basic-note">
-          Обов&apos;язковий пакет {/* Виправлено одинарні лапки */}
+          Обов&apos;язковий пакет
         </div>
       )}
     </div>

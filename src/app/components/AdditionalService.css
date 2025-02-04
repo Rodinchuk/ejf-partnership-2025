@@ -1,19 +1,29 @@
 .service-content {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: none;
     border-radius: 12px;
     padding: 10px 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     color: #0C0C12;
     font-size: 20px;
     width: 100%;
     max-width: 600px;
   }
+  .additional-option{
+    display: flex;
+    max-width: 100%;
+    background: #fff;
+    width: 1000px;
+    border-radius: 16px;
+    
+  }
   
+  .additional-option.selected{
+    background: linear-gradient(180deg,  #fff 70%, #A5CAF9);
+    border: 3px solid #111A94;
+  }
+
   @media (min-width: 768px) {
     .service-content {
       flex-direction: row;
@@ -22,6 +32,9 @@
        .service-indicator {
     width: 16px;
     height: 16px;
+    }
+    .service-info{
+        font-size: 12px;
     }
   }
   
@@ -35,23 +48,23 @@
   .service-info {
     display: flex;
     align-items: center;
-    gap: 10px;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-left:15px;
+    font-size: medium;
   }
   
   .service-indicator {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     border-radius: 3px;
     background-color: white;
-    border: 2px solid #1E3A8A;
+    border: 2px solid #257BFC;
     rotate: 45deg;
 
   }
   
   .service-indicator.selected {
-    background-color: #1E3A8A;
+    background-color: #257BFC;
     border: none;
   }
   
@@ -60,22 +73,26 @@
     border: none;
     cursor: pointer;
   }
-  
   .service-actions {
     display: flex;
-    align-items: center;
     gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap; /* Забороняємо перенесення елементів */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Контейнер займає всю ширину */
+    flex-direction: row;
+    margin-right: 3%;
   }
+  
   
   .service-price {
     background: white;
-    color: #1E3A8A;
+    color: #257BFC;
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
+    border: 3px solid #257BFC;
   }
   
   .button2choose {

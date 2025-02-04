@@ -2,8 +2,8 @@ import styles from '@/app/components/HeroSection.module.css';
 
 export default function CareerFairBanner() {
   return (
-    <section className={styles.careerBanner}>
-      <div id="home" className={styles.content}>
+    <section id="home" className={styles.careerBanner}>
+      <div  className={styles.content}>
       <div className={styles.imageContainer}>
         <img 
           src="./images/briefcase.png" 

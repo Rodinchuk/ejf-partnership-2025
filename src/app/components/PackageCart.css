@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    background: linear-gradient(180deg,  #fff 70%, #A5CAF9);
     border-radius: 24px;
     padding: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -11,7 +11,14 @@
     max-width: 300px;
     width: 80%;
   }
-  
+  .package-card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
   .package-card.selected {
     background-color: linear-gradient(180deg, #1d4ed8);
     border: 9px solid #111A94;
@@ -85,18 +92,34 @@
   }
   
   .cartbutton {
+    display: flex;
+    width: 55%;
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
     padding: 10px 16px;
-    
-    
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    height: 110%;
+    font-family: 'Nutino', sans-serif;
     background: linear-gradient(180deg, #257BFC,#111A94);
     color:#e6e6e6;
   }
-  
+  .cartbutton.selected{
+    background: #ffffff;
+    border:1px solid#257BFC;
+    color: #257BFC;
+    height: 110%;
+  }
+  .cartsvg{
+    margin-right: 5px;
+  }
+  .cartsvg.selected{
+    display: none;
+  }
   button.default {
     background: #fff; /* Синій */
     color: #2563eb;

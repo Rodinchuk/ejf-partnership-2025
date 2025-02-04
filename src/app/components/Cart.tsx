@@ -1,5 +1,3 @@
-// components/Cart.tsx
-
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -32,9 +30,9 @@ const Cart: React.FC<CartProps> = ({
     const additionalServicesCount = additionalServices.length;
 
     if (additionalPackagesCount >= 2) {
-      return baseTotal * 0.95;
+      return baseTotal * 0.90;
     } else if (additionalServicesCount >= 3) {
-      return baseTotal * 0.95;
+      return baseTotal * 0.90;
     }
 
     return baseTotal;
@@ -75,24 +73,28 @@ const Cart: React.FC<CartProps> = ({
 
   return (
     <div>
-      <h2>Кошик</h2>
+      <h2 className="cart-title">Кошик</h2>
       <div className="form-group">
+      <p className="cart-subtitle">Пакети</p>
+      {/* <div className="cartitems"> */}
         {selectedPackages.map((pkg) => (
           <div key={pkg.id} className="cart-item">
+        
             <span>{pkg.name}</span>
             <div className="cart-item-actions">
               <span>${pkg.price}</span>
               {pkg.name !== "Basic" && (
-                <button data-variant="ghost" onClick={() => onRemove(pkg.id)}>
+                <button  onClick={() => onRemove(pkg.id)}>
                   ✕
                 </button>
               )}
             </div>
           </div>
         ))}
-
+         <p >Додаткові опції</p>
         {additionalServices.map((service) => (
           <div key={service.id} className="cart-item">
+          
             <span>{service.name}</span>
             <div className="cart-item-actions">
               <span>${service.price}</span>
@@ -103,10 +105,9 @@ const Cart: React.FC<CartProps> = ({
           </div>
         ))}
       </div>
-
+<div className="cartsecondpart">
       <div className="total-section">
         <div className="total-row">
-          <span>Загальна сума:</span>
           <div className="total-amount">
             {hasDiscount && <span className="strikethrough">${originalTotal}</span>}
             <span className="final-price">${total}</span>
@@ -114,24 +115,51 @@ const Cart: React.FC<CartProps> = ({
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="form-group">
-        <Input
-          placeholder="Назва компанії"
-          value={companyName}
-          onChange={(e) => setCompanyName(e.target.value)}
-          required
-        />
-        <Input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+      <div className="discount-section">
+        <h3 className="discout-title">Знижки:</h3>
+        <p className="discount">Партнерам попередніх подій знижка — <strong>5%</strong></p>
+        <p className="discount">Basic + 2 додаткових пакети — <strong>10%</strong></p>
+        <p className="discount">Basic + 3 додаткові опції — <strong>10%</strong></p>
+        <p className="discount">*Знижки не поєднуються</p>
+        <p className="discount">*Оплата здійснюватиметься за курсом НБУ</p>
+      </div>
+
+      <form onSubmit={handleSubmit}>
+      <Input
+  style={{
+    width: '100%',
+    padding: '12px',
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    outline: 'none',
+    transition: 'border-color 0.3s ease-in-out',
+  }}
+  placeholder="Назва компанії"
+  value={companyName}
+  onChange={(e) => setCompanyName(e.target.value)}
+  required
+/>
+<Input
+  style={{
+    width: '100%',
+    padding: '12px',
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    outline: 'none',
+    transition: 'border-color 0.3s ease-in-out',
+  }}
+  type="email"
+  placeholder="Email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  required
+/>
+
         <Button type="submit" className="submit-button">
           Оформити
         </Button>
       </form>
+    </div>
     </div>
   );
 };

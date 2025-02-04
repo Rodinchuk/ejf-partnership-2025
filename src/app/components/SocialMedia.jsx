@@ -58,8 +58,9 @@ const SocialMediaFollowers = () => {
   };
 
   return (
-    <div   id="stats">
-      <h1 className={styles.title}>Ми в соцмережах</h1>
+    
+    <div   >
+      <h1 className={styles.title} id="stats">Ми в соцмережах</h1>
       <div className={styles.container} onClick={closeModal}>
         <div className={styles.grid}>
           {sortedPlatforms.map((platform, index) => (
