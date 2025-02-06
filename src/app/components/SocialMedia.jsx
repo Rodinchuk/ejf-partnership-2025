@@ -59,7 +59,7 @@ const SocialMediaFollowers = () => {
 
   return (
     
-    <div   >
+    <div  className="width-container" >
       <h1 className={styles.title} id="stats">Ми в соцмережах</h1>
       <div className={styles.container} onClick={closeModal}>
         <div className={styles.grid}>

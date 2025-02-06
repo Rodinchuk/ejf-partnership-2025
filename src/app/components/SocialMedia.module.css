@@ -2,8 +2,6 @@
     text-align: center;
     padding: 1rem;
     background-color: #fff;
-    padding-left: 10%;
-    padding-right: 10%;
   }
   
   .title {
@@ -20,10 +18,11 @@
   }
   
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 5px;
+    display: flex;
     justify-content: center;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
     font-family: 'Exo 2';
     align-items: end;
   }
