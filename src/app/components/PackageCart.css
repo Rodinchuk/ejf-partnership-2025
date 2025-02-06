@@ -73,9 +73,7 @@
   }
   
   .feature-list .bullet {
-    display: inline-block;       
-    width: 5px;              
-    height: 5px;            
+    display: inline-block;                  
     color: #2563eb;   
     transform: rotate(45deg);    
     margin-right: 8px;           
