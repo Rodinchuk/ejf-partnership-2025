@@ -10,21 +10,11 @@ body, html {
   background-attachment: scroll;
   z-index: 0;
   font-family: 'Nunito', sans-serif;
-
+  
   scroll-behavior: smooth;
 }
 /* Хедер */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 10px;
-  background-color: #111A94;
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+
 
 .h2 {
   margin-top:10%;
@@ -45,4 +35,9 @@ body, html {
   text-align: center;
   width: 100%;
   font-family: 'Exo 2';
+}
+
+.width-container{
+  max-width: 1290px;
+  margin: 0 auto;
 }
