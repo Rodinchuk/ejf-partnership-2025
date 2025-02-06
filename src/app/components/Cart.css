@@ -1,112 +1,144 @@
-/* Основні стилі для кошика */
-.cart-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #fff;
-    background: #1e73e6;
-    padding: 15px;
-    border-radius: 10px 10px 0 0;
-    margin: -20px -20px 20px -20px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  margin: -20px -20px 20px -20px;
 }
-.discount{
-    color: gray;
-    font-size: 12px;
+.discount {
+  color: gray;
+  font-size: 12px;
+}
+.discount:not(:last-child) {
+  margin-bottom: 5px;
+}
+.discount-section {
+  margin-bottom: 20px;
+}
+.cart-container {
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+.cart-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.cartsecondpart {
+  flex-basis: 320px;
 }
 .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  flex-basis: 420px;
 }
-
 .cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background: #fff;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 16px;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
 }
 
+.cart-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.cart-subtitle {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #257bfc;
+}
+.cart-item span {
+  text-align: left;
+}
 .cart-item-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-item-actions span {
+  color: #0848a3;
+  font-weight: 700;
+  font-size: 32px;
 }
 
 .total-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background: #fff;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .total-amount {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .strikethrough {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 16px;
+  text-decoration: line-through;
+  color: #afc1ff;
+  font-size: 16px;
+  font-size: 44px;
 }
 
 .final-price {
-    color: #1e73e6;
-    font-size: 20px;
-    font-weight: bold;
+  color: #0848a3;
+  font-size: 54px;
+  font-weight: bold;
 }
-
+.form {
+  max-width: 300px;
+}
+.form-input::placeholder {
+  color: #0848a3;
+}
 .submit-button {
-    background: #1e73e6;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
+  background: #1e73e6;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .submit-button:hover {
-    background: #1558b0;
+  background: #1558b0;
 }
 
 /* Адаптивність */
+@media (max-width: 768px) {
+    .cart-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 600px) {
-    .cart-container {
-        padding: 15px;
-    }
-    
-    .cart-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .cart-item-actions {
-        width: 100%;
-        justify-content: space-between;
-    }
-    
-    .total-section {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .total-section {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

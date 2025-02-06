@@ -17,15 +17,16 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({
   onInfoClick,
 }) => {
   return (
-    <div className={`additional-option ${isSelected ? "selected" : ""}`}>
+    <Button
+      variant={isSelected ? "secondary" : "default"}
+      onClick={() => onSelect(service.id)}
+      className={`additional-option ${isSelected ? "selected" : ""}`}
+    >
       <div className="service-content">
         <div className="service-indicator-wrapper">
-          <Button
-            variant={isSelected ? "secondary" : "default"}
-            onClick={() => onSelect(service.id)}
-          >
-            <div className={`service-indicator ${isSelected ? "selected" : ""}`} />
-          </Button>
+          <div
+            className={`service-indicator ${isSelected ? "selected" : ""}`}
+          />
         </div>
         <div className="service-info">
           <span>{service.name}</span>
@@ -34,7 +35,7 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({
       <div className="service-actions">
         <span className="service-price">${service.price}</span>
         {service.info && (
-          <button
+          <div
             className="info-button"
             onClick={() => onInfoClick && onInfoClick(service.info)}
           >
@@ -44,10 +45,10 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({
               width={24}
               height={24}
             />
-          </button>
+          </div>
         )}
       </div>
-    </div>
+    </Button>
   );
 };
 

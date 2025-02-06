@@ -1,19 +1,24 @@
 /* components/CareerFairBanner.module.css */
 .careerBanner {
   position: relative;
-  background: linear-gradient(180deg, #257BFC, #111A94);
-  color: white; 
-  padding: 4rem 0 0; 
+  background: linear-gradient(180deg, #257bfc, #111a94);
+  color: white;
+  padding: 4rem 0 0;
+  max-width: 100%;
+  margin: 0 auto;
   text-align: left;
-  width: 100%; /* Забираємо обмеження ширини */
+  /* width: 100%; Забираємо обмеження ширини */
   z-index: 5;
 }
 
 .content {
-  width: 100%; /* Ширина на весь екран */
+  position: relative;
+  max-width: 1290px;
+  min-height: 100%;/* Ширина на весь екран */
   margin: 0 auto;
-  padding-bottom: 30px;
-  padding-top: 5%;
+  padding-bottom: 440px;
+  padding-top: 100px;
+  padding-left: 50px;
 }
 
 .vectorSection {
@@ -31,26 +36,45 @@
   border-radius: 0%;
   margin-top: 0;
   padding: calc(4rem - 30px) 0 -30px;
+  position: absolute;
+  bottom: -1px;
+  height: 30%;
 }
 
-.title { font-size: 96px; margin-left: 5%; font-family: "Exo 2"; font-weight: 700; }
+.title {
+  font-size: 96px;
+  font-family: "Exo 2";
+  font-weight: 700;
+}
 
-.sutitle { font-size: 96px; margin-left: 5%; font-family: "Exo 2"; font-weight: 700; }
-.subtitle {font-size: 96px; margin-left: 5%; ; font-family: "Exo 2"; font-weight: 700; margin-bottom: 2rem; }
-.highlightText { font-size: 32px;  margin-left: 5%;margin-bottom: 2rem;; color: #55A7FF; }
-.universities li { 
-  list-style: none; 
-  padding: 0; 
-  font-size: 1.2rem; 
+.subtitle {
+  font-size: 96px;
+
+  font-family: "Exo 2";
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.highlightText {
+  font-size: 32px;
+  margin-bottom: 2rem;
+  color: #55a7ff;
+}
+.universities li {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
   max-width: fit-content; /* або просто видаліть max-width */
-  word-wrap: break-word; 
-  overflow-wrap: break-word; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   white-space: normal; /* або 'nowrap' якщо хочете уникнути переносу слів */
 }
 
-
-.universities { list-style: none; padding: 0; font-size: 1.2rem;}
-.bubbles{
+.universities {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+.bubbles {
   display: none;
 }
 
@@ -62,39 +86,52 @@
     height: 60px;
     margin-top: -35px;
   }
-  
-  .title { font-size: 45px; }
-  .subtitle { font-size: 45px; }
-  .highlightText {font-size: 25px;}
-  
+
+  .title {
+    font-size: 65px;
+  }
+  .subtitle {
+    font-size: 65px;
+  }
+  .highlightText {
+    font-size: 25px;
+  }
+
   .separator {
     height: 1px;
     width: 80%;
-    background: #2A5DCF;
+    background: #2a5dcf;
     margin: 0;
   }
-  
 }
-
 
 @media (max-width: 480px) {
   .content {
     padding-bottom: 50px;
   }
-  
+
   .vectorSection {
     height: 50px;
     margin-top: -29px;
   }
-  
-  .title { font-size: 45px; align-self: flex-start;}
-  .subtitle { font-size: 45px;  }
-  .sutitle  { font-size: 45px;  }
-  .highlightText {font-size: 25px;}
+
+  .title {
+    font-size: 45px;
+    align-self: flex-start;
+  }
+  .subtitle {
+    font-size: 45px;
+  }
+  .sutitle {
+    font-size: 45px;
+  }
+  .highlightText {
+    font-size: 25px;
+  }
 }
 
 .sideImage {
-  width: 200px; 
+  width: 200px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -103,15 +140,18 @@
 .sideImage:hover {
   transform: scale(1.1);
 }
+.containerhero{
+  display: flex;
+}
 @media (max-width: 1024px) {
   .careerBanner {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-.universities{
-  font-size: 80%;
-}
+  .universities {
+    font-size: 80%;
+  }
   .imageContainer {
     position: static;
     flex-direction: row;
@@ -120,63 +160,65 @@
     justify-content: center;
     margin-top: 20px;
   }
-
+.containerhero{
+  display: flex;
+  justify-content: center;
+}
+.content{
+  padding-left: 0;
+}
   .sideImage {
     width: 150px;
   }
 }
 
-
 @media (max-width: 768px) {
   .content {
     margin-left: 0;
-    padding-bottom: 70px;
+  
   }
 
   .imageContainer {
     flex-direction: row;
     gap: 10px;
   }
-.containerhero{
-  position: absolute;
-  left:25%
-}
-.careerBanner{
-  height: 100%;
-}
-.vectorImage{
-  position: absolute;
-  top:510px;
-  height: 30%;
-}
-.sideImage {
-    width: 120px;
+
+  .careerBanner {
+    height: 100%;
   }
-  .content {
-    padding-bottom: 50px;
+  .sideImage {
+    width: 120px;
   }
 
   .sideImage {
     width: 100px;
   }
+  .containerhero{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .separator{
+    display: none;
+  }
 }
 
 .briefcase {
+  width: 100%;
+  height: 100%;
+}
+.imageContainer{
   position: absolute;
-  width: 633px;
-  height: 633px;
-  left: 55%;
-  top: 10%;
+  width: 30%;
+  right: 5%;
+  top: 100px;
   border-radius: 10px;
 }
-
-
 @media (max-width: 1024px) {
-  .briefcase {
-   display: none;
+  .imageContainer {
+    display: none;
   }
   .bubbles {
-    
     position: absolute;
     width: 500px;
     height: 580px;
@@ -188,9 +230,9 @@
 }
 
 @media (max-width: 768px) {
-  .briefcase {
+  .imageContainer {
     display: none;
-   }
+  }
   .bubbles {
     position: absolute;
     width: 500px;
@@ -201,11 +243,11 @@
 }
 
 @media (max-width: 480px) {
-  .briefcase {
+  .imageContainer {
     display: none;
-   }
+  }
   .bubbles {
-    display:block;
+    display: block;
     position: absolute;
     width: 370px;
     height: 450px;
@@ -213,28 +255,14 @@
     top: 17%;
     z-index: 1;
   }
-  .containerhero {
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-left: -5%;
-  }
-  
+ 
 }
-.containerhero {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  width: fit-content;
-  margin-left: 5%;
-}
+
+
 
 .uni {
   display: flex;
   align-items: center;
- 
 }
 
 .universities {
@@ -255,7 +283,7 @@
 .separator {
   height: 40px;
   width: 1px;
-  background: #2A5DCF;
+  background: #2a5dcf;
   margin: 0 1.5rem;
 }
 
@@ -265,59 +293,7 @@
   gap: 0.8rem;
 }
 
-.location, .calendar {
+.location,
+.calendar {
   flex-shrink: 0;
-}
-
-@media (max-width: 768px){
-  .containerhero{
-    flex-direction: column;
-    align-items: left;
-    margin-left: 0%;
-    padding: 0%;
-  }
-
-  .separator {
-    height: 1px;
-    width: 60%;
-    background: #2A5DCF;
-  }
-  .calendar{
-    margin-right: 0px;
-  }
-  .location{
-    margin-left: 0px;
-  }
-}
-@media (max-width: 768px) {
-  .uni {
-    margin-left: 0;
-    gap: 0; 
-  }
-  .universities{
-    margin-right: 5%;
-  }
-  .ejfdate {
-    margin: 0;
-    gap: 0; 
-  }
-}
-
-
-@media (max-width: 480px) {
-  .uni {
-    margin-left: 0;
-    gap: 0px; 
-  }
-  .universities{
-    margin-right: 5%;
-  }
-  .ejfdate {
-    margin: 0;
-    gap: 0; 
-  }
-}
-
-.uni {
-  gap: 0.8rem; 
 }

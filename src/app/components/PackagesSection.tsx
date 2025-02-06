@@ -6,6 +6,8 @@ import Cart from "./Cart";
 import { Package, AdditionalService as ServiceType } from "../types/types";
 import "@/app/components/PackagesSection.css";
 import "@/app/components/AdditionalService.css";
+import waveUp from '../../../public/images/bg-hero.png' 
+import Image from "next/image";
 
 const packages: Package[] = [
   {
@@ -136,6 +138,7 @@ const PackagesSection = () => {
 
   return (
     <div className="packages-section">
+     <Image className="package-wave-up" src={waveUp} alt="ing" ></Image>
       <div className="container">
         <h2 id="partnership" className="section-title">
           Пакети пропозицій
@@ -190,6 +193,7 @@ const PackagesSection = () => {
           </div>
         </div>
       )}
+        <Image className="package-wave-down" src={waveUp} alt="ing" ></Image>
     </div>
   );
 };
