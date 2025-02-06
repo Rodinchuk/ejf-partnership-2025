@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(180deg, #111a94, #1e65d0, #111a94);
+  margin-bottom: 15%;
 }
 .package-wave-up{
   position: absolute;
@@ -111,8 +112,8 @@ body {
   height: 200px;
 }
 .package-wave-down{
-  height: 200px;
-  top:97%
+  height: 250px;
+  top:95%
 }
 }
 
