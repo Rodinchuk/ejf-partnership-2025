@@ -22,7 +22,7 @@ interface PackageCardProps {
 
 const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, isBasic, onInfoClick }) => {
   return (
-    <div className={`glass-card package-card ${isSelected ? 'selected' : ''}`}>
+    <div className={`glass-card package-card ${isSelected ? 'selected' : ''}`}  onClick={() => onSelect(pkg.id)}>
       <div className="package-header">
         <div>
           <h3>{pkg.name}</h3>
@@ -56,7 +56,7 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
     <div className='package-card-footer'><Button
     className={`cartbutton ${isSelected ? "selected" : ""}`}
     variant={isSelected ? "secondary" : "default"}
-    onClick={() => onSelect(pkg.id)}
+   
   ><Image className={`cartsvg ${isSelected ? "selected" : ""}`} src="/images/cart.svg" alt="cartsvg" width={20} height={20} /> 
 
     {isSelected ? "Прибрати з кошика" : "У кошик"}
