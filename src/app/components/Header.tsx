@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logoContainer}>
+      <div className={styles.headerContainer}><a href='#' className={styles.logoContainer}>
         <Image
           onClick={scrollToHome}
           src="/images/logoWhite.png" // Make sure this path is correct for Next.js
@@ -35,15 +35,17 @@ const Header = () => {
           onMouseEnter={(e) => e.currentTarget.classList.add(styles.spin)}
           onMouseLeave={(e) => e.currentTarget.classList.remove(styles.spin)}
         />
-      </div>
+      </a>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li><a href="#about">Про подію</a></li>
           <li><a href="#stats">Статистика</a></li>
           <li><a href="#contacts">Контакти</a></li>
-          <li><button onClick={scrollToPartnership} className={styles.partnerButton}>Стати партнером</button></li>
         </ul>
       </nav>
+      <a onClick={scrollToPartnership} className={styles.partnerButton}>Стати партнером</a>
+
+      
       <div className={styles.menuIcon} onClick={toggleMenu}>
         <div className={styles.bar}></div>
         <div className={styles.bar}></div>
@@ -57,7 +59,7 @@ const Header = () => {
           <li><a href="#contacts" onClick={closeMenu}>Контакти</a></li>
           <li><a href="#partnership"><button className={styles.partnerButton} onClick={closeMenu}>Стати партнером</button></a></li>
         </ul>
-      </div>
+      </div></div>
     </header>
   );
 };
