@@ -49,13 +49,23 @@
   .button:hover {
     transform: scale(1.05);
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .conclusionbutton{
-      font-size: 2rem;
-    } 
+      font-size: 2rem;}
+    .conclusionWave{
+    height: 200px;
+    }
+    
+  .conclusioncontent{
+    margin-top: none;
   }
+    } 
+  
   @media (max-width: 425px) {
     .conclusionbutton{
       font-size: 1rem;
     } 
   }
+  /* .conclusioncontent{
+    margin-top: 100%;
+  } */

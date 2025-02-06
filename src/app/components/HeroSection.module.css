@@ -86,6 +86,10 @@
     height: 60px;
     margin-top: -35px;
   }
+  .vectorImage{
+    height: 200px;
+  top:80%
+  }
 
   .title {
     font-size: 65px;
@@ -151,6 +155,7 @@
   }
   .universities {
     font-size: 80%;
+    margin-bottom: 250px;
   }
   .imageContainer {
     position: static;

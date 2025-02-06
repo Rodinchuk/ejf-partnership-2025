@@ -85,7 +85,18 @@ const Cart: React.FC<CartProps> = ({
               <div className="cart-item-actions">
                 <span>${pkg.price}</span>
                 {pkg.name !== "Basic" && (
-                  <button onClick={() => onRemove(pkg.id)}>✕</button>
+              <button
+              data-variant="default"
+              onClick={() => onRemove(pkg.id)}
+              style={{
+                background: "transparent",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
+            >
+              <img src="./images/cancel.svg" alt="Cancel" width="24" height="24" />
+            </button>
                 )}
               </div>
             </div>
@@ -97,11 +108,18 @@ const Cart: React.FC<CartProps> = ({
               <div className="cart-item-actions">
                 <span>${service.price}</span>
                 <button
-                  data-variant="ghost"
-                  onClick={() => onRemove(service.id)}
-                >
-                  ✕
-                </button>
+  data-variant="default"
+  onClick={() => onRemove(service.id)}
+  style={{
+    background: "transparent",
+    border: "none",
+    padding: 0,
+    cursor: "pointer",
+  }}
+>
+  <img src="./images/cancel.svg" alt="Cancel" width="24" height="24" />
+</button>
+
               </div>
             </div>
           ))}

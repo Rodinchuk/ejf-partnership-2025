@@ -1,0 +1,143 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 10%;
+  }
+  
+  
+  .px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .py-8 {
+    padding-bottom: 2rem;
+    
+    margin-bottom: 10%;
+  }
+  .card {
+    border: 3px solid #3b82f6;
+  }
+  /* Заголовок */
+  .title {
+    margin-bottom: 10%;
+    color: #257BFC;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Exo 2';
+  }
+  
+  
+  /* Контейнер для вмісту */
+  .activities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+  
+  .content-wrapper {
+    display: grid;
+    gap: 0.5rem;
+    align-items: start;
+  }
+  
+  .md\:grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Секція карток */
+  .cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 50%; /* Ширина карток */
+    margin-left: 5%; /* Зсув вліво */
+  }
+  
+  .border {
+    border-width: 1px;
+  }
+  
+  .border-blue-300 {
+    border-color: #93c5fd;
+  }
+  
+  .rounded-2xl {
+    border-radius: 1rem;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .bg-blue-50 {
+    background-color: #eff6ff;
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .transition-all {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .text-blue-600 {
+    color: #000;
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  .text-gray-600 {
+    color: #4b5563;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button img {
+    width: 23px;
+    height: 16px;
+  }
+  
+  /* Секція зображень */
+  .images-section {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .rounded-xl {
+    border-radius: 0.75rem;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .h-auto {
+    height: auto;
+  }
+  
