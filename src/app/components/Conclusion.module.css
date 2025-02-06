@@ -1,4 +1,5 @@
 .conclusion {
+  position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,7 +10,14 @@
     position: relative;
     overflow: hidden;
   }
-  
+  .conclusionWave{
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    transform: scale(-1);
+  }
   .title {
     color: white;
     font-size: 2.5rem;
@@ -24,6 +32,7 @@
     margin-bottom: 2rem;
   }
   
+
   .conclusionbutton {
     background: white;
     color: #1e3a8a;
@@ -32,8 +41,7 @@
     padding: 1rem 2rem;
     border-radius: 15px;
     border: none;
-    width: 65lvh;
-    height: 10lvh;
+    
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
   }
@@ -41,4 +49,13 @@
   .button:hover {
     transform: scale(1.05);
   }
-  
+  @media (max-width: 768px) {
+    .conclusionbutton{
+      font-size: 2rem;
+    } 
+  }
+  @media (max-width: 425px) {
+    .conclusionbutton{
+      font-size: 1rem;
+    } 
+  }
