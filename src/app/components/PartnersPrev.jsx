@@ -2,7 +2,7 @@ import react from 'react';
 import './PartnersPrev.css';
 export default function PartnersPrev(){
     return(
-        <section className='partners-section'>
+        <section className='partners-section width-container'>
             <h2 className='title'>Нас підтримували</h2>
             <div className="partners">
                 <img src="./images/p1.png" className='partner'></img>
