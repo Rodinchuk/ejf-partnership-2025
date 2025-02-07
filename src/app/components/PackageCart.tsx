@@ -10,14 +10,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import Image from 'next/image'; // Імпортуємо Image з next/image
+import Image from 'next/image'; 
 import "@/app/components/PackageCart.css";
 interface PackageCardProps {
   pkg: Package;
   isSelected: boolean;
   onSelect: (id: string) => void;
   isBasic?: boolean;
-  onInfoClick?: () => void; // Додано новий пропс
+  onInfoClick?: () => void;
 }
 
 const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, isBasic, onInfoClick }) => {
