@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import PackageCard from "./PackageCart"; // Переконайтеся, що назва файлу правильна
+import PackageCard from "./PackageCart"; 
 import AdditionalService from "./AdditionalService";
-import Cart from "./Cart"; // Додаю компонент Cart назад
+import Cart from "./Cart"; 
 import { Package, AdditionalService as ServiceType } from "../types/types";
 import "@/app/components/PackagesSection.css";
 import "@/app/components/AdditionalService.css";
