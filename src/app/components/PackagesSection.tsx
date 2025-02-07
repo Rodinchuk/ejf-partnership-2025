@@ -233,7 +233,9 @@ const PackagesSection = () => {
         </div>
       )}
       <Image className="package-wave-down" src={waveUp} alt="wave" />
+      <div className="army-text"><p><b>10%</b> отриманих коштів підуть на допомогу ЗСУ!</p></div>
     </div>
+    
   );
 };
 
