@@ -118,7 +118,6 @@ body {
     width: 100%;
     margin-left: 0%;
   }
-  
 .package-wave-up{
   height: 200px;
 
@@ -127,7 +126,7 @@ body {
   background: #111a94;
   height: 250px;
   top:96%;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 }
 
@@ -182,6 +181,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  
+.army-text-content{
+  font-size: 14px;
+}
+  
   .container {
     width: 100%;
   }
@@ -354,4 +358,7 @@ body {
 .army-text{
   margin-bottom: 250px;
   color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
