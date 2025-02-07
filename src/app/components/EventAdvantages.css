@@ -15,8 +15,8 @@
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Дві колонки */
-  gap: 4rem 6rem; /* Збільшений відступ між колонками */
-  align-items: start; /* Незалежна висота карток у ряді */
+  gap: 4rem 20rem; /* Збільшений відступ між колонками */
+  align-items: start;
 }
 
 
@@ -42,29 +42,30 @@
 
 .card-toggle img {
   width: 24px;
-  transition: transform 0.3s ease;
 }
 
 .rotate-180 {
   transform: rotate(180deg);
 }
 
-
 .overlay-image {
   position: absolute;
   left: 50%;
   top: 250px;
-  transform: translate(-50%, -50%) ; 
-  width: 400px;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
   z-index: 0;
-  /* pointer-events: none; */
-  opacity: 1; 
-  transition: opacity 0.5s ease; 
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 
 .overlay-image:hover {
-  opacity: 0; 
+  width: 450px;
+  height: 450px;
+  transform: translate(-50%, -55%) rotate(20deg);
 }
+
 @media (max-width: 768px) {
   .container {
     padding: 20px 15px;

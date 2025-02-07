@@ -34,7 +34,6 @@
     padding: 40px;
     text-align: center;
     align-items: center;
-    transition: transform 0.3s ease;
     background: linear-gradient(180deg, #257bfc, #111a94); /* Градієнт для всіх карток */
   }
   .infoButton {
@@ -53,7 +52,6 @@
     padding: 40px;
     text-align: center;
     align-items: center;
-    transition: transform 0.3s ease;
   }
   .lilcard{
     background: linear-gradient(180deg, #fff, #fff);
