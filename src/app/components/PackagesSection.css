@@ -41,7 +41,7 @@ body {
 @media(max-width: 1440px){
   
 .package-wave-down{
-  position: absolute;
+  position: relative;
   bottom: -1px;
   left: 0;
   margin-top: 300px;
