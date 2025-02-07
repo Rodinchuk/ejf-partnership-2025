@@ -32,7 +32,8 @@ export default function CareerFairBanner() {
               />
             </svg>
             <ul className={styles.universities}>
-              <li>Національний університет "Львівська Політехніка"</li>
+              <li>Національний університет</li>
+              <li>"Львівська Політехніка"</li>
             </ul>
           </div>
           <div className={styles.separator}></div>

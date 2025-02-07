@@ -245,6 +245,13 @@
     left: 0%;
     top: 0%;
   }
+  
+
+.uni {
+  display: flex;
+  align-items: center;
+  gap:5px;
+}
 }
 
 @media (max-width: 480px) {
@@ -282,7 +289,7 @@
 }
 
 .universities li:last-child {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .separator {
