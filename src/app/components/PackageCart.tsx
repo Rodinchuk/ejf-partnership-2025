@@ -4,10 +4,6 @@ import { Button } from './ui/button';
 import { Package } from '../types/types';
 import {
   Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
 import Image from 'next/image'; 
