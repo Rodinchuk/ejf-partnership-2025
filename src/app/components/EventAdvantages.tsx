@@ -73,7 +73,7 @@ const EventAdvantages: React.FC = () => {
 
   return (
     <div>
-      <h2 className="h2">Переваги для Вас</h2>
+      <h2 className="title">Переваги для Вас</h2>
       <div className="container">
         <div className="cards-container">
           {cardsData.map((card, index) => (
