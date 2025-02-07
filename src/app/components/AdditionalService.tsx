@@ -8,6 +8,9 @@ interface AdditionalServiceProps {
   isSelected: boolean;
   onSelect: (id: string) => void;
   onInfoClick?: (info: string | undefined) => void;
+  // Нові пропси для редагування стилів:
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 const AdditionalService: React.FC<AdditionalServiceProps> = ({
@@ -15,12 +18,15 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({
   isSelected,
   onSelect,
   onInfoClick,
+  className = "",
+  style = {},
 }) => {
   return (
     <Button
       variant={isSelected ? "secondary" : "default"}
       onClick={() => onSelect(service.id)}
-      className={`additional-option ${isSelected ? "selected" : ""}`}
+      className={`additional-option ${isSelected ? "selected" : ""} ${className}`}
+      style={style}
     >
       <div className="service-content">
         <div className="service-indicator-wrapper">
@@ -37,7 +43,10 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({
         {service.info && (
           <div
             className="info-button"
-            onClick={() => onInfoClick && onInfoClick(service.info)}
+            onClick={(e) => {
+              e.stopPropagation();
+              onInfoClick && onInfoClick(service.info);
+            }}
           >
             <Image
               src="/images/info.png"
