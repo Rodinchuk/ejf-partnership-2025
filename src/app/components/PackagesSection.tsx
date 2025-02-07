@@ -8,7 +8,6 @@ import "@/app/components/PackagesSection.css";
 import "@/app/components/AdditionalService.css";
 import waveUp from "../../../public/images/bg-hero.png";
 import Image from "next/image";
-
 const packages: Package[] = [
   {
     id: "basic",
@@ -24,10 +23,10 @@ const packages: Package[] = [
     info: `
       <p><b>Basic</b><p>
       <p><b>Участь у двох днях події з власним банером:</b> За Вами буде закріплено місце для розміщення банера та промоматеріалів, а також надано можливість поспілкуватися зі студентами, щоб представити бренд. Ми допоможемо підібрати інтерактивні вікторини або розглянемо Ваші пропозиції.</p>
-      <p><b>Ваш логотип у постпроєктному відео та на brand wall:</b> Логотип буде розміщено у поствідео події та на великому банері разом із логотипами партнерів.</p>
+      <p ><b>Ваш логотип у постпроєктному відео та на brand wall:</b> Логотип буде розміщено у поствідео події та на великому банері разом із логотипами партнерів.</p>
       <p><b>Транслювання відеоролика компанії під час події:</b> На місці події будуть екрани для трансляції відеороликів (тривалість 25-30 секунд).</p>
       <p><b>Участь у нетворкінгу:</b> Зустріч представників компаній із учасниками та організаторами в неформальній атмосфері.</p>
-      <p><b>Share and Win:</b> Інтерактивна гра для популяризації бренду. Учасники виконують завдання через Telegram-бот і публікують Stories із позначками @best_lviv.</p>
+      <p ><b>Share and Win:</b> Інтерактивна гра для популяризації бренду. Учасники виконують завдання через Telegram-бот і публікують Stories із позначками @best_lviv.</p>
     `,
   },
   {
@@ -40,7 +39,6 @@ const packages: Package[] = [
       "Закріплені Instagram stories",
     ],
     info: `
-      
       <p><b>Interactive</b><p>
       <p><b>Панельна дискусія:</b> Обговорення підібраної теми між студентами та спікерами. Модератор допомагає взаємодіяти з усіма учасниками.</p>
       <p><b>BEST Treasure Hunt:</b> За два дні до події студенти шукають призи на території Львівської Політехніки за підказками в Instagram @best_lviv.</p>
@@ -57,13 +55,14 @@ const packages: Package[] = [
       "Розміщення індивідуального поста про компанію в Instagram",
     ],
     info: `
-      <p><b>Performer</b><p>
+      <p ><b>Performer</b><p>
       <p><b>Проведення воркшопу:</b> Навчальний захід, де представники компанії допомагають учасникам розвиватися в темі, важливій для їхньої кар’єри.</p>
-      <p><b>Публікація статті про компанію на сайті:</b> Інформація про вашу компанію, її місію та успіхи буде опублікована на нашому сайті.</p>
-      <p><b>Розміщення індивідуального поста про компанію в Instagram:</b> Фото з описом діяльності компанії на сторінці @best_lviv.</p>
+      <p ><b>Публікація статті про компанію на сайті:</b> Інформація про вашу компанію, її місію та успіхи буде опублікована на нашому сайті.</p>
+      <p ><b>Розміщення індивідуального поста про компанію в Instagram:</b> Фото з описом діяльності компанії на сторінці @best_lviv.</p>
     `,
   },
 ];
+
 
 const additionalServices: ServiceType[] = [
   
@@ -231,12 +230,13 @@ const PackagesSection = () => {
       </div>
 
       {modalContent && (
-        <div className="modal-overlay" onClick={closeModal}>
+        <div className="modal-overlay" onClick={closeModal}> 
+
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-scrollable-content" dangerouslySetInnerHTML={{ __html: modalContent }}></div>
-            <button className="modal-close-button" onClick={closeModal}>
-              Закрити
-            </button>
+            <div className="modal-scrollable-content" dangerouslySetInnerHTML={{ __html: modalContent }}>
+            </div>
+          <button className="modal-close-button" onClick={closeModal}> Закрити
+          </button>
           </div>
         </div>
       )}
