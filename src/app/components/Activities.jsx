@@ -26,39 +26,40 @@ const Activities = () => {
     {
       title: "Інформаційні зони",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Спеціальні зони, де компанії протягом двох годин щодня презентують себе, спілкуються зі студентами та надають інформацію про вакансії й можливості стажування.",
     },
     {
-      title: "Воркшопи",
+      title: "Воркшоп",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Інтерактивний захід, який передбачає активну участь студентів у розв’язанні практичних завдань під керівництвом експерта. Це дає змогу закріпити теоретичні знання та отримати цінні поради для майбутньої кар’єри.",
     },
     {
       title: "Панельна дискусія",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Панельна дискусія – це інтерактивний формат обговорення, де група експертів обмінюється думками на актуальну тему під керівництвом модератора. До дискусії також долучаються студенти, які можуть ставити запитання, висловлювати свої погляди. Це дозволяє розглянути різні ідеї та знайти нові розв’язання актуальних проблем.",
     },
     {
       title: "Share and Win",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Захопливий квест, де студенти виконують завдання, беруть участь у вікторинах і отримують за це бали. Виконання завдань підтверджує фотозвіт у Stories з позначкою @best_lviv та Вашої компанії. Три найактивніших гравців отримають призи надані компаніями.",
     },
     {
       title: "BEST Treasure Hunt",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Квест для студентів, який проводиться за кілька днів до початку події. Головне завдання – знайти заховані призи від компаній-партнерів на території Львівської політехніки. Обов'язковою умовою для отримання подарунка є позначення у соцмережах акаунтів наших партнерів.",
     },
     {
       title: "Симуляція співбесід",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Активність тривалістю до 10 хв на кожного учасника. Впродовж відведеного часу, студенти відпрацьовують навички проходження реальної співбесіди, отримують карʼєрні консультації та зворотний звʼязок від компаній.",
     },
     {
       title: "Нетворкінг",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Неформальна зустріч студентів, представників компаній, університету та організаторів, яка проводиться після першого дня події. Це час, щоб поспілкуватись, обговорити соціальні питання, такі як розвиток вищої освіти, або інші актуальні теми. Крім цього, Ви зможете встановити корисні контакти з потенційними партнерами та працівниками.",
     },
-  ];
+];
+
 
   return (
     <section className="container">

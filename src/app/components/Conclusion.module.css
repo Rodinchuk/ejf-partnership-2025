@@ -9,7 +9,7 @@
     background: linear-gradient(to bottom, #2563eb, #1e40af);
     position: relative;
     overflow: hidden;
-    
+
   }
   .conclusionWave{
     position: absolute;
@@ -42,11 +42,12 @@
     padding: 1rem 2rem;
     border-radius: 15px;
     border: none;
-    
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
   }
-  
+  .conclusionbutton a {
+    text-decoration: none;
+}
   .button:hover {
     transform: scale(1.05);
   }
@@ -67,6 +68,6 @@
       font-size: 1rem;
     } 
   }
-  /* .conclusioncontent{
-    margin-top: 100%;
-  } */
+   .conclusioncontent{
+    margin-top: 15%;
+  } 

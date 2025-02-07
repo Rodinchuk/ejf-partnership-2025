@@ -122,6 +122,10 @@ body {
   height: 200px;
 
 }
+
+.packages-section {
+  margin-bottom: none;
+}
 .package-wave-down{
   background: #111a94;
   height: 250px;

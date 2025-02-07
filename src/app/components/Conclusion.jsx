@@ -12,7 +12,7 @@ const Conclusion = () => {
       <p className={styles.description}>
         Приєднуйтесь до 17-го Інженерного Ярмарку Кар'єри, щоб розвивати молодь та бізнес разом!
       </p>
-      <a href="#partnership" className={styles.conclusionbutton}>Співпрацювати</a>
+     <a href="#partnership"><button className={styles.conclusionbutton}>Співпрацювати</button></a> 
       </div>
     </section>
   );
