@@ -37,12 +37,12 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
                 <Image src="/images/info.png" alt="Package information" width={20} height={20} /> 
               </button>
             </DialogTrigger>
-            <DialogContent>
+            {/* <DialogContent>
               <DialogHeader>
                 <DialogTitle>{pkg.name}</DialogTitle>
                 <DialogDescription>{pkg.info}</DialogDescription>
               </DialogHeader>
-            </DialogContent>
+            </DialogContent> */}
           </Dialog>
         )}
       </div>
