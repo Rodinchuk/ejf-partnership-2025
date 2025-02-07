@@ -62,6 +62,17 @@ const packages: Package[] = [
 ];
 
 const additionalServices: ServiceType[] = [
+  
+  {
+    id: "treasure-hunt",
+    name: "BEST Treasure Hunt",
+    price: 160,
+    info: `
+    <p><b>Участь у BEST Treasure Hunt</b></p>
+    <p>Студенти беруть участь у захопливому пошуку призів на території Львівської Політехніки за підказками з Instagram @best_lviv.</p>
+
+  `,},
+
   {
     id: "interview-simulation",
     name: "Симуляція співбесід",
@@ -73,47 +84,38 @@ const additionalServices: ServiceType[] = [
   `,},
 
   {
-    id: "treasure-hunt",
-    name: "BEST Treasure Hunt",
-    price: 160,
+    id: "telegram-promo",
+    name: "Промоція кар'єрних можливостей в Telegram-боті події",
+    price: 120,
     info: `
-    <p><b>BEST Treasure Hunt</b></p>
-    <p>Студенти беруть участь у захопливому пошуку призів на території Львівської Політехніки за підказками з Instagram @best_lviv.</p>
-
+    <p><b>Промоція кар'єрних можливостей в Telegram-боті події</b></p>
+    <p>Студенти отримують інформацію про стажування, курси чи вакансії вашої компанії через Telegram-бот.</p>
   `,},
 
   {
     id: "cv-access",
-    name: "Доступ до CV учасників",
+    name: "Доступ до бази CV учасників",
     price: 110,
     info: `
-    <p><b>Доступ до CV учасників</b></p>
+    <p><b>Доступ до бази CV учасників</b></p>
     <p>Партнери отримують доступ до бази CV студентів, які зареєструвалися через Telegram-бот події.</p>
   `,},
 
   {
     id: "website-article",
-    name: "Публікація статті про компанію на сайті",
+    name: "Публікація статті про компанію на сайті BEST Lviv",
     price: 90,
     info: `
 
-    <p><b>Публікація статті про компанію на сайті</b></p>
+    <p><b>Публікація статті про компанію на сайті BEST Lviv</b></p>
     <p>Інформація про вашу компанію, її місію та успіхи буде опублікована на нашому сайті.</p>
   `,},
 
-  {
-    id: "telegram-promo",
-    name: "Промоція в Telegram-боті",
-    price: 100,
-    info: `
-    <p><b>Промоція в Telegram-боті</b></p>
-    <p>Студенти отримують інформацію про стажування, курси чи вакансії вашої компанії через Telegram-бот.</p>
-  `,},
 
   {
     id: "instagram-stories",
     name: "Закріплені Instagram stories",
-    price: 120,
+    price: 80,
     info: `
     <p><b>Закріплені Instagram stories</b></p>
     <p>Промоція у 2 Stories на офіційній сторінці @best_lviv, які залишаються протягом місяця.</p>
@@ -122,9 +124,9 @@ const additionalServices: ServiceType[] = [
   {
     id: "linkedin-post",
     name: "Індивідуальний пост про компанію в LinkedIn",
-    price: 150,
+    price: 80,
     info: `
-    <p><b>Індивідуальний пост у LinkedIn</b></p>
+    <p><b>Індивідуальний пост в LinkedIn</b></p>
     <p>Представлення ключових переваг вашої компанії у форматі поста на сторінці BEST Lviv.</p>
   `,},
 

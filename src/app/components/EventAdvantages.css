@@ -141,11 +141,13 @@
 }
 
 .card.card-expanded {
-  max-height: 500px; /* Максимальна висота при розгортанні */
+  max-height: 500px;
+  border: 3px solid #257BFC; 
 }
 
 .card.card-collapsed {
-  max-height: 100px; /* Висота при згортанні */
+  max-height: 100px;
+  border: 3px solid #257BFC;
 }
 
 .card-description {
