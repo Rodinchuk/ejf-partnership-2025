@@ -13,6 +13,7 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({ title, description, ico
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
+    <div className="card-wrapper">
     <div
       className={`card ${isExpanded ? "card-expanded" : "card-collapsed"}`}
       onClick={() => setIsExpanded(!isExpanded)}
@@ -27,6 +28,7 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({ title, description, ico
         </div>
       </div>
       {isExpanded && <p className="card-description">{description}</p>}
+    </div>
     </div>
   );
 };
@@ -72,7 +74,7 @@ const EventAdvantages: React.FC = () => {
   ];
 
   return (
-    <div>
+    <div className="eventadv">
       <h2 className="title">Переваги для Вас</h2>
       <div className="container">
         <div className="cards-container">

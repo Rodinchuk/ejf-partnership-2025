@@ -2,7 +2,8 @@
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  margin-bottom: 15%;
 }
 
 .h2 {
@@ -15,8 +16,9 @@
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Дві колонки */
-  gap: 4rem 20rem; /* Збільшений відступ між колонками */
+  gap: 6rem 20rem; /* Збільшений відступ між колонками */
   align-items: start;
+  position: relative;
 }
 
 
@@ -123,6 +125,8 @@
   }
 }
 .card {
+
+  position: relative;
   background: white;
   border-radius: 15px;
   border: 3px solid #1a237e;
@@ -144,11 +148,14 @@
 .card.card-expanded {
   max-height: 500px;
   border: 3px solid #257BFC; 
+  position: absolute;
+  z-index: 10; 
 }
 
 .card.card-collapsed {
   max-height: 100px;
   border: 3px solid #257BFC;
+  position: relative;
 }
 
 .card-description {
@@ -169,4 +176,37 @@
 
 .card.card-collapsed .card-description {
   opacity: 0; /* Ховаємо текст при згортанні */
+}
+.card-wrapper {
+  position: relative;     /* Створюємо локальний контекст для абсолютного позиціонування */
+  height: 100px;          /* Фіксована висота, що відповідає згорнутій картці */
+  overflow: visible;  
+   /* базовий контекст для абсолютного позиціонування картки */
+   overflow: visible;    /* Дозволяємо, щоб розгорнута картка виходила за межі обгортки */
+}
+
+/* Базові стилі для картки */
+.card {
+  position: absolute;    
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease;  
+  box-sizing: border-box;
+}
+
+/* Стилі для згорнутої картки */
+.card.card-collapsed {
+  max-height: 100px;
+  border: 3px solid #257BFC;
+}
+
+/* Стилі для розгорнутої картки */
+.card.card-expanded {
+  max-height: 500px;        /* Нова максимальна висота */
+  border: 3px solid #257BFC;
+  z-index: 10;              /* Забезпечує, що розгорнута картка накриває інші елементи */
+}
+.eventadv{
+  margin-bottom: 100px;
 }
