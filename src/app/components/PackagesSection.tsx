@@ -8,6 +8,7 @@ import "@/app/components/PackagesSection.css";
 import "@/app/components/AdditionalService.css";
 import waveUp from "../../../public/images/bg-hero.png";
 import Image from "next/image";
+
 const packages: Package[] = [
   {
     id: "basic",
