@@ -12,17 +12,19 @@ import {
 } from "./ui/dialog";
 import Image from 'next/image'; 
 import "@/app/components/PackageCart.css";
+
 interface PackageCardProps {
   pkg: Package;
   isSelected: boolean;
   onSelect: (id: string) => void;
   isBasic?: boolean;
   onInfoClick?: () => void;
+  isLast?: boolean;
 }
 
-const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, isBasic, onInfoClick }) => {
+const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, isBasic, onInfoClick, isLast }) => {
   return (
-    <div className={`glass-card package-card ${isSelected ? 'selected' : ''}`}  onClick={() => onSelect(pkg.id)}>
+    <div className={`glass-card package-card ${isSelected ? 'selected' : ''}`} onClick={() => onSelect(pkg.id)}>
       <div className="package-header">
         <div>
           <h3>{pkg.name}</h3>
@@ -44,6 +46,16 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
           </Dialog>
         )}
       </div>
+      {isLast && (
+        <div className="basic-note">
+          Залишилось 2!
+        </div>
+      )}
+      {isBasic && (
+        <div className="basic-note">
+          Обов&apos;язковий пакет
+        </div>
+      )}
       <ul className="feature-list">
         {pkg.features.map((feature, index) => (
           <li key={index}>
@@ -53,21 +65,18 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
         ))}
       </ul>
       {!isBasic && (
-    <div className='package-card-footer'><Button
-    className={`cartbutton ${isSelected ? "selected" : ""}`}
-    variant={isSelected ? "secondary" : "default"}
-   
-  ><Image className={`cartsvg ${isSelected ? "selected" : ""}`} src="/images/cart.svg" alt="cartsvg" width={20} height={20} /> 
-
-    {isSelected ? "Прибрати з кошика" : "У кошик"}
-  </Button></div>
-  
-      )}
-      {isBasic && (
-        <div className="basic-note">
-          Обов&apos;язковий пакет
+        <div className='package-card-footer'>
+          <Button
+            className={`cartbutton ${isSelected ? "selected" : ""}`}
+            variant={isSelected ? "secondary" : "default"}
+          >
+            <Image className={`cartsvg ${isSelected ? "selected" : ""}`} src="/images/cart.svg" alt="cartsvg" width={20} height={20} /> 
+            {isSelected ? "Прибрати з кошика" : "У кошик"}
+          </Button>
         </div>
       )}
+      
+    
     </div>
   );
 };

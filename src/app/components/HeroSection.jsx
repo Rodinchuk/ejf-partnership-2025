@@ -13,7 +13,7 @@ export default function CareerFairBanner() {
           <p className={styles.title}>Ярмарок</p>
           <p className={styles.subtitle}>Кар'єри</p>
         </h1>
-        <div className={styles.highlightText}>Інвестуй в майбутнє!</div>
+        <div className={styles.highlightText}>Інвестуй у майбутнє!</div>
         <div className={styles.containerhero}>
           <div className={styles.uni}>
             <svg

@@ -186,22 +186,24 @@ const PackagesSection = () => {
           Пакети пропозицій
         </h2>
         <div className="packages-grid">
-          <PackageCard
-            pkg={packages[0]}
-            isSelected={true}
-            onSelect={() => {}}
-            isBasic={true}
-            onInfoClick={() => handleInfoClick(packages[0].info)}
-          />
-          {packages.slice(1).map((pkg) => (
-            <PackageCard
-              key={pkg.id}
-              pkg={pkg}
-              isSelected={selectedPackages.some((p) => p.id === pkg.id)}
-              onSelect={() => handlePackageSelect(pkg.id)}
-              onInfoClick={() => handleInfoClick(pkg.info)}
-            />
-          ))}
+        <PackageCard
+  pkg={packages[0]}
+  isSelected={true}
+  onSelect={() => {}}
+  isBasic={true}
+  onInfoClick={() => handleInfoClick(packages[0].info)}
+/>
+{packages.slice(1).map((pkg, index) => (
+  <PackageCard
+    key={pkg.id}
+    pkg={pkg}
+    isSelected={selectedPackages.some((p) => p.id === pkg.id)}
+    onSelect={() => handlePackageSelect(pkg.id)}
+    onInfoClick={() => handleInfoClick(pkg.info)}
+    isLast={index === packages.length - 2} // Останній елемент (з урахуванням `slice(1)`)
+  />
+))}
+
         </div>
 
         <h3 className="section-subtitle">Додаткові опції</h3>
