@@ -65,9 +65,6 @@
 }
 
 @media (max-width: 480px) {
-  .conclusionbutton {
-    font-size: 1rem;
-  }
   .title {
     max-width: 65%;
     word-wrap: break-word;
@@ -114,7 +111,7 @@
     left: 0;
   }
   .conclusionbutton{
-    font-size: 3rem;
+    font-size: 2.5rem;
     border-radius: 30px;
    }
    .title{
@@ -130,7 +127,7 @@
 }
 
 .conclusionbutton{
-  font-size: 3rem;
+  font-size: 2.5rem;
   border-radius: 30px;
  }
  .title{
@@ -159,3 +156,10 @@
 }
 }
 
+
+@media(max-width:480px){
+  .conclusionbutton{
+    font-size:medium;
+    border-radius: 13px;
+  }
+}
