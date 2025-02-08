@@ -81,7 +81,7 @@
 
 @media (max-width: 768px) {
   .content {
-    padding-bottom: 70px;
+    padding-bottom: 170px;
   }
   .vectorSection {
     height: 60px;
@@ -89,7 +89,9 @@
   }
   .vectorImage{
     height: 200px;
-  top:80%
+  top:90%;
+  background: linear-gradient(to top, #111A94 80%, transparent 20%);
+
   }
 
   .title {
@@ -227,8 +229,14 @@
 }
 
 @media (max-width: 768px) {
-  .briefcase{
-    display: none;
+  .bubbles{
+    position: absolute;
+    display: block;
+    width: 80vw; /* Робимо ширину рівною ширині вікна */
+    height: 70vh; /* Робимо висоту рівною висоті вікна */
+    overflow: hidden; /* Обрізаємо все, що виходить за межі */
+    top: 15%;
+    left: 90px;
   }
   
 
