@@ -8,10 +8,9 @@
   text-align: center;
   background: linear-gradient(180deg, #111A94, #257BFC);
   overflow: hidden;
-}
-.conclusioncontainer{
   z-index: 5;
 }
+
 .conclusionWave {
   position: absolute;
   top: -1px;
@@ -114,14 +113,20 @@
     top: 27%;
     left: 0;
   }
-}
-
-
-.downballs{
-  z-index: 1;
-}
-.downballsbig{
-  z-index: 1;
+  .conclusionbutton{
+    font-size: 3rem;
+    border-radius: 30px;
+   }
+   .title{
+    font-size: 2rem;
+    margin-bottom: 5%;
+   }
+   .description{
+    font-size: 1rem;
+    margin-left:  10%;
+    margin-bottom: 9%;
+    max-width: 80%;
+   }
 }
 
 .conclusionbutton{
@@ -138,3 +143,19 @@
   margin-bottom: 9%;
   max-width: 80%;
  }
+.conclusioncontainer{
+  z-index: 5;
+  margin: 0;
+}
+.conclusioncontent{
+  top:10%;
+  position: relative;
+}
+@media(min-width:1200px){
+  
+.conclusioncontent{
+  top:150px;
+  position: relative;
+}
+}
+
