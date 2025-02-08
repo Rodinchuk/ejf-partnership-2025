@@ -64,6 +64,8 @@ export default function CareerFairBanner() {
           className={styles.vectorImage}
         />
       </div>
+          <img src="./images/bubbles.png" className={styles.bubbles} />
+       
     </section>
   );
 }

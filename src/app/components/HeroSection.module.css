@@ -19,6 +19,7 @@
   padding-bottom: 440px;
   padding-top: 100px;
   padding-left: 50px;
+  z-index: 5;
 }
 
 .vectorSection {
@@ -220,30 +221,14 @@
   border-radius: 10px;
 }
 @media (max-width: 1024px) {
-  .imageContainer {
+  .briefcase{
     display: none;
-  }
-  .bubbles {
-    position: absolute;
-    width: 500px;
-    height: 580px;
-    left: 50%;
-    top: 15%;
-    z-index: 1;
-    overflow-x: hidden;
   }
 }
 
 @media (max-width: 768px) {
-  .imageContainer {
+  .briefcase{
     display: none;
-  }
-  .bubbles {
-    position: absolute;
-    width: 500px;
-    height: 580px;
-    left: 0%;
-    top: 0%;
   }
   
 
@@ -255,19 +240,19 @@
 }
 
 @media (max-width: 480px) {
-  .imageContainer {
+  .briefcase{
     display: none;
   }
   .bubbles {
-    display: block;
     position: absolute;
-    width: 370px;
-    height: 450px;
-    left: 0%;
-    top: 17%;
-    z-index: 1;
-  }
- 
+    display: block;
+    width: 100vw; /* Робимо ширину рівною ширині вікна */
+    height: 75vh; /* Робимо висоту рівною висоті вікна */
+    overflow: hidden; /* Обрізаємо все, що виходить за межі */
+    top: 10%;
+    left: 0;
+}
+
 }
 
 

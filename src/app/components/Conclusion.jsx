@@ -14,6 +14,9 @@ const Conclusion = () => {
       </p>
      <a href="#partnership"><button className={styles.conclusionbutton}>Співпрацювати</button></a> 
       </div>
+      
+      <img src="./images/down-balls-big.png" className={styles.downballsbig}></img>
+      <img src="./images/down-balls.png" className={styles.downballs}></img>
     </section>
   );
 };
