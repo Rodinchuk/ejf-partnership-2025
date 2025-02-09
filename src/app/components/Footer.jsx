@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="logo">
           <Image
-            src='/images/BEST-logoFooter.png'  // Corrected path
+            src='/images/BEST-logoFooter.svg'  
             alt="BEST Lviv"
             width={130}
             height={67}
@@ -18,28 +18,28 @@ const Footer = () => {
         <div className="social-icons">
           <a href="https://t.me/bestlviv" target="_blank" rel="noopener noreferrer">
             <img
-              src='/images/tgfooter.png'  // Corrected path
+              src='/images/tgfooter.svg'  
               alt="Telegram"
               className="icon"
             />
           </a>
           <a href="https://www.instagram.com/best_lviv/" target="_blank" rel="noopener noreferrer">
             <img
-              src='/images/instfooter.png'  // Corrected path
+              src={'/images/instfooter.svg' }
               alt="Instagram"
               className="icon"
             />
           </a>
           <a href="https://ua.linkedin.com/company/bestlviv" target="_blank" rel="noopener noreferrer">
             <img
-              src='/images/LNfooter.png'  // Corrected path
+              src='/images/LNfooter.svg'  
               alt="LinkedIn"
               className="icon"
             />
           </a>
           <a href="https://www.tiktok.com/@best__lviv" target="_blank" rel="noopener noreferrer">
             <img
-              src='/images/ttfooter.png'  // Corrected path
+              src='/images/ttfooter.svg'  
               alt="TikTok"
               className="icon"
             />
