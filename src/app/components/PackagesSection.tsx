@@ -7,6 +7,7 @@ import { Package, AdditionalService as ServiceType } from "../types/types";
 import "@/app/components/PackagesSection.css";
 import "@/app/components/AdditionalService.css";
 import waveUp from "../../../public/images/bg-hero.png";
+import ExtrabigBalls from  "../../../public/images/extrabigballs.png";
 import Image from "next/image";
 
 const packages: Package[] = [
@@ -184,6 +185,9 @@ const PackagesSection = () => {
 
   return (
     <div className="packages-section">
+      <Image className="extrabigballs" src={ExtrabigBalls} alt="exrtabigballs"></Image>
+      
+      <div className="packpack">
       <Image className="package-wave-up" src={waveUp} alt="wave" />
       <div className="container">
         <h2 id="partnership" className="section-title">
@@ -243,6 +247,7 @@ const PackagesSection = () => {
       )}
       <Image className="package-wave-down" src={waveUp} alt="wave" />
       <div className="army-text"><p className="army-text-content"><b>10%</b> отриманих коштів підуть на допомогу ЗСУ!</p></div>
+    </div>
     </div>
     
   );

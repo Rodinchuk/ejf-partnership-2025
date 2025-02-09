@@ -74,7 +74,7 @@ const EventAdvantages: React.FC = () => {
   ];
 
   return (
-    <div className="eventadv">
+    <div className="eventad">
       <h2 className="title">Переваги для Вас</h2>
       <div className="container">
         <div className="cards-container">

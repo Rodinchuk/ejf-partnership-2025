@@ -173,3 +173,13 @@
         height: 200px;
     }
 }
+.contactLink {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .contactLink:hover {
+    text-decoration-line: underline;
+  }
+  

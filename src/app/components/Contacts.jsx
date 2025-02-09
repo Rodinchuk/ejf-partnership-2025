@@ -79,7 +79,9 @@ export default function Contacts() {
 </svg>
 
                 )}
-                {contact.phone}
+                 <a href={`tel:${contact.phone}`} className={styles.contactLink}>
+    {contact.phone}
+  </a>
               </p>
               <p className={`${styles.contactInfo} ${contact.special ? styles.specialText : ""}`}>
                 {contact.special ? (
@@ -93,7 +95,9 @@ export default function Contacts() {
                     </svg>
                     
                 )}
-                {contact.email}
+                 <a href={`mailto:${contact.email}`} className={styles.contactLink}>
+    {contact.email}
+  </a>
               </p>
             </div>
           ))}
