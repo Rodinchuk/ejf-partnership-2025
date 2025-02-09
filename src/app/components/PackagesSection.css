@@ -398,6 +398,10 @@ body {
   .extrabigballs{
     display: none;
   }
+  
+.packages-section {
+  overflow: visible;
+}
 }
 
 @media (min-width: 1024px) {
