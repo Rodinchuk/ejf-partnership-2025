@@ -7,7 +7,7 @@ const contacts = [
     name: "Софія Герус",
     role: "відповідальна за корпоративні зв’язки",
     phone: "+380 98 600 4363",
-    email: "sonya.gerus@BEST-eu.org",
+    email: "sonya.gerus@best-eu.org",
     image: "/images/sofia.png",
   },
   {

@@ -57,6 +57,8 @@ h2 {
   font-size: 40px;
   margin-bottom: 15px;
   color: #257bfc;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
 }
 .cart-item span {
   text-align: left;
@@ -67,9 +69,13 @@ h2 {
   gap: 10px;
 }
 .cart-item-actions span {
-  color: #0848a3;
+  background: linear-gradient(180deg, #257BFC, #111A94);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 35px;
 }
 
 .total-section {
@@ -90,15 +96,21 @@ h2 {
 
 .strikethrough {
   text-decoration: line-through;
-  color: #afc1ff;
+  color: #97C0F5;
   font-size: 16px;
   font-size: 44px;
+  font-weight: lighter;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .final-price {
-  color: #0848a3;
+  background: linear-gradient(180deg, #257BFC, #111A94);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 54px;
   font-weight: bold;
+  font-family: 'Exo 2', sans-serif;
 }
 .form {
   max-width: 300px;
@@ -107,7 +119,7 @@ h2 {
   color: #0848a3;
 }
 .submit-button {
-  background: #1e73e6;
+  background: linear-gradient(180deg, #257BFC, #111A94);
   color: white;
   padding: 10px;
   border: none;

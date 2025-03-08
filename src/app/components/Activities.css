@@ -47,6 +47,10 @@
   min-height: 100px;
 }
 
+.title{
+  margin-top: 10%;
+}
+
 .card:hover {
   transform: scale(1.02);
 }

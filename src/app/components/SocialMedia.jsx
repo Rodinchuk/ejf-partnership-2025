@@ -84,7 +84,7 @@ const SocialMediaFollowers = () => {
                     toggleModal(e);
                   }}
                 >
-                  <img src="./images/info.png" alt="info button" />
+                  <img className={styles.infobuttonsm} src="./images/info.png" alt="info button" />
                 </button>
               )}
             </div>

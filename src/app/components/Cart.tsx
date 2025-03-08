@@ -77,7 +77,7 @@ const Cart: React.FC<CartProps> = ({
       <h2 className="cart-title">Кошик</h2>
       <div className="cart-group">
         <div className="form-group">
-          <p className="cart-subtitle">Пакети</p>
+          <p className="cart-subtitle">Пропозиції</p>
           {/* <div className="cartitems"> */}
           {selectedPackages.map((pkg) => (
             <div key={pkg.id} className="cart-item">
@@ -128,6 +128,7 @@ const Cart: React.FC<CartProps> = ({
           <div className="total-section">
             <div className="total-row">
               <div className="total-amount">
+              <span className="final-price">=</span>
                 {hasDiscount && (
                   <span className="strikethrough">${originalTotal}</span>
                 )}

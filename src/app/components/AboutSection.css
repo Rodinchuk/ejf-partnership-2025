@@ -3,13 +3,16 @@
     padding: 4rem 1.5rem;
     max-width: 1290px;
     margin: 0 auto;
+    justify-content: center;
   }
   
   .about-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
     color: #257BFC;
+    margin-bottom:15px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
     font-family: 'Exo 2';
   }
   
@@ -46,12 +49,13 @@
     .about-content {
       flex-direction: column;
     }
-  
+    .about-title{
+      margin-top: 15%;}
     .about-carousel {
       width: 100%;
       max-width: 500px;
-      margin: 0 auto; /* Додано центрування */
-      padding: 0 1rem; /* Додано відступи для кращого вигляду */
+      margin: 0 auto;
+      padding: 0 1rem; 
     }
   
     .about-text {

@@ -14,7 +14,7 @@
 .content {
   position: relative;
   max-width: 1290px;
-  min-height: 100%;/* Ширина на весь екран */
+  min-height: 100%;
   margin: 0 auto;
   padding-bottom: 440px;
   padding-top: 100px;
@@ -232,9 +232,9 @@
   .bubbles{
     position: absolute;
     display: block;
-    width: 80vw; /* Робимо ширину рівною ширині вікна */
-    height: 70vh; /* Робимо висоту рівною висоті вікна */
-    overflow: hidden; /* Обрізаємо все, що виходить за межі */
+    width: 80vw;
+    height: 70vh; 
+    overflow: hidden;
     top: 15%;
     left: 90px;
   }

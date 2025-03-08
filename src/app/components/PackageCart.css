@@ -32,17 +32,19 @@
   }
   
   .package-header h3 {
-    font-size: 40px;
+    font-size: 2em;
     font-weight: bold;
-    color: #000000; /* Темно-синій */
+    color: #000000; 
     margin: 0;
+    font-family: 'Exo 2', sans-serif;
   }
   
   .package-header .price {
-    font-size: 32px;
+    font-size: 1.8em;
     color: #257BFC; 
-    font-weight: 600;
-    margin: 0;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-family: 'Exo 2', sans-serif;
   }
   
   .info-button {

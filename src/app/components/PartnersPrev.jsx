@@ -3,7 +3,7 @@ import './PartnersPrev.css';
 export default function PartnersPrev(){
     return(
         <section className='partners-section width-container'>
-            <h2 className='title'>Нас підтримували</h2>
+            <h2 className='ptitle'>Нас підтримували</h2>
             <div className="partners">
                 <img src="./images/p1.svg" className='partner'></img>
                 <img src="./images/p2.svg" className='partner'></img>
