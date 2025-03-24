@@ -76,7 +76,7 @@ const Activitiesen = () => {
         </div>
         <div className="pictures">
           <img
-            src="./images/activity1.png"
+            src="./images/hapai.png"
             alt="Activity 1"
             className="activity1"
           />
@@ -86,7 +86,7 @@ const Activitiesen = () => {
             className="activity2"
           />
           <img
-            src="./images/activity3.png"
+            src="./images/investui.png"
             alt="Activity 3"
             className="activity3"
           />

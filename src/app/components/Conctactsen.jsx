@@ -11,7 +11,7 @@ const contacts = [
     image: "/images/sofia.png",
   },
   {
-    name: "Maxym Senkiv",
+    name: "Maksym Senkiv",
     role: "Main organizer",
     phone: "+380 66 638 5322",
     email: "maksym.senkiv@best-eu.org",

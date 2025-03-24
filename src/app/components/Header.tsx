@@ -50,9 +50,9 @@ const Header = () => {
           <li><a href="#contacts">Контакти</a></li>
         </ul>
       </nav>
-      <div onClick={goToEng} className={styles.interButton} >
+      <button onClick={goToEng} className={styles.interButton} >
       EN
-    </div>
+    </button>
       <a onClick={scrollToPartnership} className={styles.partnerButton}>Стати партнером</a>
 
       
