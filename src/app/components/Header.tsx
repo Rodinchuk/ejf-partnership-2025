@@ -27,9 +27,7 @@ const Header = () => {
   const goToEng = () => {
     router.push("/en"); 
   };
-  const goToUkr = () => {
-    router.push("/");
-  };
+ 
 
   return (
     <header className={styles.header}>

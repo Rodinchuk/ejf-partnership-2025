@@ -24,9 +24,6 @@ const Header = () => {
   };
  const router = useRouter();
 
-  const goToEng = () => {
-    router.push("/en"); 
-  };
   const goToUkr = () => {
     router.push("/");
   };
