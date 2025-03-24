@@ -226,3 +226,8 @@
     display: block;
   }
 }
+.interButton{
+  border: 3px solid #257BFC;
+  border-radius: 15px;
+  padding: 0.5rem 0.7rem;
+}

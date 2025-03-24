@@ -1,22 +1,21 @@
+// Компонент на Next.js
+
 import styles from './AboutBEST.module.css';
 
-export default function AboutBEST() {
+export default function AboutBESTen() {
   return (
     <section  className={styles.section}> 
-      <h2 className={styles.title}>Організатор події</h2>
+      <h2 className={styles.title}>Event organizer</h2>
     <div className={styles.container}>
       <div className={styles.contentWrapper}>
         <div className={styles.textBlock}>
           <h3 className={styles.subtitle}>BEST Lviv</h3>
           <p className={styles.description}>
-            (Board of European Students of Technology) – осередок міжнародної
-            неприбуткової громадської організації, який об'єднує студентів
-            технічних спеціальностей. Нашою місією є розвиток студентів через
-            обмін знаннями та співпрацю компаній, університетів та студентів
-            Європи.
+            (Board of European Students of Technology) is a constantly growing non-profit and non-political organization that brings together students of technical specialties. Our mission is to develop students through knowledge exchange and cooperation between companies, universities, and students in Europe.
+
           </p>
           <a href="https://www.best-lviv.org.ua/" className={styles.link}>
-            Дізнатися більше на сайті ↗
+            View more on website ↗
           </a>
         </div>
         <div className={styles.infoBlock}>
@@ -27,15 +26,15 @@ export default function AboutBEST() {
           <div className={styles.stats}>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>84</span>
-              <span className={styles.statLabel}>осередків</span>
+              <span className={styles.statLabel}>Local BEST Groups</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>30</span>
-              <span className={styles.statLabel}>країн</span>
+              <span className={styles.statLabel}>countries</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>36</span>
-              <span className={styles.statLabel}>років досвіду</span>
+              <span className={styles.statLabel}>years of experience</span>
             </div>
           </div>
         </div>
