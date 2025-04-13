@@ -4,8 +4,8 @@ import styles from "./SocialMedia.module.css";
 
 const SocialMediaFollowers = () => {
   const [showModal, setShowModal] = useState(false);
-  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
   const [isMobile, setIsMobile] = useState(false);
+  const [modalContent, setModalContent] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -15,6 +15,17 @@ const SocialMediaFollowers = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden"; // Заморожуємо фон
+    } else {
+      document.body.style.overflow = "auto"; // Відновлюємо прокручування
+    }
+    return () => {
+      document.body.style.overflow = "auto"; // Відновлюємо прокручування при розмонтуванні
+    };
+  }, [showModal]);
 
   const platforms = [
     { name: "followers", followers: "900+", icon: "./images/tg.png", mobileIcon: "./images/mobile-tg.png" },
@@ -29,10 +40,10 @@ const SocialMediaFollowers = () => {
       mobileIcon: "./images/mobile-inst.png",
       highlight: true,
       details: [
-        "Key engagement rate on Instagram - 5%.",
-        "Number of accounts reached during events - 20.500",
-        "The average number of Stories’ views - 675",
-        "Average number of interactions per month - 6.000",
+        "Key engagement rate on Instagram – 5%",
+        "Number of accounts reached during events– 20.5 thousand",
+        "Average number of views on Stories – 675",
+        "Average number of interactions per month – 6000",
       ],
     },
   ];
@@ -41,32 +52,36 @@ const SocialMediaFollowers = () => {
   if (isMobile) {
     sortedPlatforms.sort((a, b) => (a.name2 === "Instagram" ? -1 : 1));
   } else {
-    sortedPlatforms.splice(2, 0, sortedPlatforms.splice(sortedPlatforms.findIndex(p => p.name2 === "Instagram"), 1)[0]);
+    sortedPlatforms.splice(
+      2,
+      0,
+      sortedPlatforms.splice(sortedPlatforms.findIndex((p) => p.name2 === "Instagram"), 1)[0]
+    );
   }
 
-  const toggleModal = (event) => {
-    const buttonRect = event.target.getBoundingClientRect();
-    setModalPosition({
-      top: buttonRect.top + window.scrollY + 10,
-      left: buttonRect.left + window.scrollX + (isMobile ? -200 : -90),
-    });
-    setShowModal(!showModal);
+  const openModal = (details) => {
+    setModalContent(details);
+    setShowModal(true);
   };
 
   const closeModal = () => {
     setShowModal(false);
+    setModalContent([]);
   };
 
   return (
-    
-    <div  className="width-container" >
-      <h1 className={styles.title} id="stats">Social Media Metrics</h1>
-      <div className={styles.container} onClick={closeModal}>
+    <div className="width-container">
+      <h1 className={styles.title} id="stats">
+      Social Media Metrics
+      </h1>
+      <div className={styles.container}>
         <div className={styles.grid}>
           {sortedPlatforms.map((platform, index) => (
             <div
               key={index}
-              className={`${styles.card} ${platform.name2 === "Instagram" ? styles.instcard : styles.whiteCard} ${platform.highlight ? styles.highlight : ""}`}
+              className={`${styles.card} ${
+                platform.name2 === "Instagram" ? styles.instcard : styles.whiteCard
+              } ${platform.highlight ? styles.highlight : ""}`}
             >
               <img
                 src={isMobile ? platform.mobileIcon : platform.icon}
@@ -79,12 +94,13 @@ const SocialMediaFollowers = () => {
               {platform.name2 === "Instagram" && (
                 <button
                   className={styles.infoButton}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleModal(e);
-                  }}
+                  onClick={() => openModal(platform.details)}
                 >
-                  <img className={styles.infobuttonsm} src="./images/info.png" alt="info button" />
+                  <img
+                    className={styles.infobuttonsm}
+                    src="./images/info.png"
+                    alt="info button"
+                  />
                 </button>
               )}
             </div>
@@ -93,13 +109,18 @@ const SocialMediaFollowers = () => {
       </div>
 
       {showModal && (
-        <div
-          className={`${styles.modalContent} ${styles.lilcard}`}
-          style={{ position: "absolute", top: modalPosition.top, left: modalPosition.left }}
-        >
-          {platforms.find((p) => p.name2 === "Instagram")?.details?.map((detail, i) => (
-            <p key={i}>{detail}</p>
-          ))}
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {modalContent.map((detail, i) => (
+              <p key={i}>{detail}</p>
+            ))}
+            <button className={styles.closeButton} onClick={closeModal}>
+              Close
+            </button>
+          </div>
         </div>
       )}
     </div>
