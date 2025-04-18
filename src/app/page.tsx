@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -13,14 +12,20 @@ import Conclusion from "./components/Conclusion";
 import PackagesSection from './components/PackagesSection';
 import Footer from './components/Footer';
 import './globals.css';
+import type { Metadata } from "next";
 
-export default function Home() {   
+export const metadata: Metadata = {
+  title: "ІЯК 2025 Партнерство",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
+export default function Home() {
   return (
     <>
-      <Head>
-        <title>ІЯК 2025 Партнерство</title>
-      </Head>
-      <Header />   
+      <Header />
       <HeroSection />
       <AboutSection />
       <EventAdvantages />
