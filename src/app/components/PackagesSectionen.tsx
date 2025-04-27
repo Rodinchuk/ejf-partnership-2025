@@ -101,7 +101,7 @@ const additionalServices: ServiceType[] = [
 {
     id: "panel-discussion",
     name: "Panel discussion",
-    price: 160,
+    price: 150,
     info: `
     <p><b>Panel discussion</b></p>
     <p>A discussion on a selected topic between students and speakers. A moderator facilitates interaction among all participants.</p>
