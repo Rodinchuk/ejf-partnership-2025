@@ -79,15 +79,34 @@ const packages: Package[] = [
 
 
 const additionalServices: ServiceType[] = [
-    {
-        id: "treasure-hunt",
-        name: "Participation in the BEST Treasure Hunt",
-        price: 160,
-        info: `
-          <p><b>Participation in the BEST Treasure Hunt</b></p>
-          <p>Two days before the event, students will be able to take part in a “treasure hunt”. Tips on the location of the prizes will be on the Instagram page @best_lviv, and the organizers will hide the awards from the partners on the territory of Lviv Polytechnic.</p>
-        `,
-      },
+  {
+    id: "workshop",
+    name: "Conducting a workshop",
+    price: 200,
+    info: `
+    <p><b>Conducting a workshop</b></p>
+      <p>An educational event where company representatives help participants develop skills and knowledge important for their careers.</p>
+  `,
+},
+  
+{
+    id: "treasure-hunt",
+    name: "BEST Treasure Hunt",
+    price: 160,
+    info: `
+    <p><b>Participation in the BEST Treasure Hunt</b></p>
+    <p>Students participate in an exciting treasure hunt on the territory of Lviv Polytechnic, guided by hints from Instagram @best_lviv.</p>
+  `,
+},
+{
+    id: "panel-discussion",
+    name: "Panel discussion",
+    price: 160,
+    info: `
+    <p><b>Panel discussion</b></p>
+    <p>A discussion on a selected topic between students and speakers. A moderator facilitates interaction among all participants.</p>
+  `,
+},
       {
         id: "interview-simulation",
         name: "Interview simulation",
