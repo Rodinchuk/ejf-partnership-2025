@@ -215,7 +215,7 @@ const PackagesSection = () => {
 
   return (
     <div className="packages-section">
-      <Image className="extrabigballs" src={ExtrabigBalls} alt="exrtabigballs"></Image>
+      <Image className="extrabigballs" src={ExtrabigBalls} alt="velykikylky"></Image>
       
       <div className="packpack">
       <Image className="package-wave-up" src={waveUp} alt="wave" />
