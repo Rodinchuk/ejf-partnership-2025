@@ -81,10 +81,12 @@ const packages: Package[] = [
 const additionalServices: ServiceType[] = [
   {
     id: "workshop",
-    name: "Conducting a workshop",
+    name: "Conducting a workshop (Limit 2 pcs.)",
     price: 200,
     info: `
-    <p><b>Conducting a workshop</b></p>
+    <p><b>Conducting a workshop</b> </p>
+        <p style="color: gray">Limit 2 pcs.</p>
+
       <p>An educational event where company representatives help participants develop skills and knowledge important for their careers.</p>
   `,
 },
