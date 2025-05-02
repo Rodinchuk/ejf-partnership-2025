@@ -59,11 +59,11 @@ body {
     width: 50%; /* Ширина карток */
     margin-left: 5%; /* Зсув вліво */
   }
-  
+/*   
   .border {
     border-width: 1px;
   }
-  
+   */
   .border-blue-300 {
     border-color: #93c5fd;
   }
