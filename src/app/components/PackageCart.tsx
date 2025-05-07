@@ -44,7 +44,7 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
       </div>
       {isLast && (
         <div className="basic-note">
-          Залишилось 2!
+          Залишилось 1!
         </div>
       )}
       {isBasic && (

@@ -44,7 +44,7 @@ const PackageCarden: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, 
       </div>
       {isLast && (
         <div className="basic-note">
-          Limit 2 pcs.
+          Limit 1 pc.
         </div>
       )}
       {isBasic && (
