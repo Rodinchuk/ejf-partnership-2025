@@ -18,7 +18,7 @@ interface PackageCardProps {
   isLast?: boolean;
 }
 
-const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, isBasic, onInfoClick, isLast }) => {
+const PackageCard: React.FC<PackageCardProps> = ({ pkg, onSelect, isBasic, onInfoClick }) => {
   return (
     <div className={`glass-card package-card`} onClick={() => onSelect(pkg.id)}>
       <div className="package-header">
