@@ -78,11 +78,10 @@ const Cart: React.FC<CartProps> = ({
       <div className="cart-group">
         <div className="form-group">
           <p className="cart-subtitle">Пропозиції</p>
-          {/* <div className="cartitems"> */}
           {selectedPackages.map((pkg) => (
             <div key={pkg.id} className="cart-item">
               <span>{pkg.name}</span>
-              <div className="cart-item-actions">
+              {/* <div className="cart-item-actions">
                 <span>${pkg.price}</span>
                 {pkg.name !== "Basic" && (
               <button
@@ -97,8 +96,8 @@ const Cart: React.FC<CartProps> = ({
             >
               <img src="./images/cancel.svg" alt="Cancel" width="24" height="24" />
             </button>
-                )}
-              </div>
+                )} */}
+              {/* </div> */}
             </div>
           ))}
           <p className="cart-subtitle">Додаткові опції</p>
@@ -142,9 +141,9 @@ const Cart: React.FC<CartProps> = ({
             <p className="discount">
               Партнерам попередніх подій знижка — <strong>5%</strong>
             </p>
-            <p className="discount">
+            {/* <p className="discount">
               Basic + 2 додаткових пакети — <strong>10%</strong>
-            </p>
+            </p> */}
             <p className="discount">
               Basic + 3 додаткові опції — <strong>10%</strong>
             </p>

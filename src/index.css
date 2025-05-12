@@ -31,9 +31,9 @@ body {
 .glass-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: var(--radius);
-  border: 1px solid var(--border-light);
   box-shadow: 0 8px 32px 0 var(--shadow);
   padding: 1.5rem;
+  cursor: none;
 }
 
 .floating-sphere {

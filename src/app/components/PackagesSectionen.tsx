@@ -79,18 +79,6 @@ const packages: Package[] = [
 
 
 const additionalServices: ServiceType[] = [
-  {
-    id: "workshop",
-    name: "Conducting a workshop (Limit 1 pc.)",
-    price: 200,
-    info: `
-    <p><b>Conducting a workshop</b> </p>
-        <p style="color: gray">Limit 1 pc.</p>
-
-      <p>An educational event where company representatives help participants develop skills and knowledge important for their careers.</p>
-  `,
-},
-  
 {
     id: "treasure-hunt",
     name: "BEST Treasure Hunt",
@@ -98,15 +86,6 @@ const additionalServices: ServiceType[] = [
     info: `
     <p><b>Participation in the BEST Treasure Hunt</b></p>
     <p>Students participate in an exciting treasure hunt on the territory of Lviv Polytechnic, guided by hints from Instagram @best_lviv.</p>
-  `,
-},
-{
-    id: "panel-discussion",
-    name: "Panel discussion",
-    price: 150,
-    info: `
-    <p><b>Panel discussion</b></p>
-    <p>A discussion on a selected topic between students and speakers. A moderator facilitates interaction among all participants.</p>
   `,
 },
       {
@@ -163,6 +142,25 @@ const additionalServices: ServiceType[] = [
           <p>This format is suitable for briefly and concisely presenting the key advantages of your company on the page of the student organization BEST Lviv.</p>
         `,
       },
+      {
+        id: "workshop",
+        name: "Conducting a workshop ",
+        price: 200,
+        info: `
+        <p><b>Conducting a workshop</b> </p>
+    
+          <p>An educational event where company representatives help participants develop skills and knowledge important for their careers.</p>
+      `,
+    },
+    {
+      id: "panel-discussion",
+      name: "Panel discussion",
+      price: 150,
+      info: `
+      <p><b>Panel discussion</b></p>
+      <p>A discussion on a selected topic between students and speakers. A moderator facilitates interaction among all participants.</p>
+    `,
+  },
     ];
 
 const PackagesSection = () => {
@@ -243,13 +241,15 @@ const PackagesSection = () => {
         <h3 className="section-subtitle">Additional options</h3>
 
         <div className="additional-services-container">
-          {additionalServices.map((service) => (
+          {additionalServices.map((service, index) => (
             <AdditionalService
               key={service.id}
               service={service}
               isSelected={selectedServices.some((s) => s.id === service.id)}
               onSelect={() => handleServiceSelect(service.id)}
               onInfoClick={() => handleInfoClick(service.info)}
+              isSoldOut={index >= additionalServices.length - 2} 
+
 
             />
           ))}

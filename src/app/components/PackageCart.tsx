@@ -20,7 +20,7 @@ interface PackageCardProps {
 
 const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, isBasic, onInfoClick, isLast }) => {
   return (
-    <div className={`glass-card package-card ${isSelected ? 'selected' : ''}`} onClick={() => onSelect(pkg.id)}>
+    <div className={`glass-card package-card`} onClick={() => onSelect(pkg.id)}>
       <div className="package-header">
         <div>
           <h3>{pkg.name}</h3>
@@ -30,26 +30,15 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
           <Dialog>
             <DialogTrigger asChild>
               <button className="info-button" onClick={onInfoClick}>
-                <Image src="/images/info.png" alt="Package information" width={20} height={20} /> 
+                <Image src="/images/info.png" alt="Package information" width={20} height={20} />
               </button>
             </DialogTrigger>
-            {/* <DialogContent>
-              <DialogHeader>
-                <DialogTitle>{pkg.name}</DialogTitle>
-                <DialogDescription>{pkg.info}</DialogDescription>
-              </DialogHeader>
-            </DialogContent> */}
           </Dialog>
         )}
       </div>
-      {isLast && (
-        <div className="basic-note">
-          Залишилось 1!
-        </div>
-      )}
-      {isBasic && (
-        <div className="basic-note">
-          Обов&apos;язковий пакет
+      {!isBasic && (
+        <div className="overlay">
+          <p className="overlay-text">Sold out</p>
         </div>
       )}
       <ul className="feature-list">
@@ -61,20 +50,13 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, isSelected, onSelect, is
         ))}
       </ul>
       {!isBasic && (
-        <div className='package-card-footer'>
-          <Button
-            className={`cartbutton ${isSelected ? "selected" : ""}`}
-            variant={isSelected ? "secondary" : "default"}
-          >
-            <Image className={`cartsvg ${isSelected ? "selected" : ""}`} src="/images/cart.svg" alt="cartsvg" width={20} height={20} /> 
-            {isSelected ? "Прибрати з кошика" : "У кошик"}
-          </Button>
-        </div>
-      )}
-      
-    
+            <div className="package-card-footer">
+              <Button className={`cartbutton`}>
+                <Image className={`cartsvg`} src="/images/cart.svg" alt="cartsvg" width={20} height={20} />
+                Add to Cart
+              </Button>
+            </div>)}
     </div>
   );
 };
-
 export default PackageCard;

@@ -142,11 +142,8 @@ const Cart: React.FC<CartProps> = ({
             <p className="discount">
             Partners of previous events get a <strong>5%</strong>discount
             </p>
-            <p className="discount">
+           <p className="discount">
             Basic + 3 additional options<strong>$50</strong>
-            </p>
-            <p className="discount">
-            Basic + 2 additional packages — <strong>$100</strong>
             </p>
             <p className="discount">10% of the proceeds will go to help the Ukrainian Armed Forces!
             </p>

@@ -175,22 +175,16 @@ const PackagesSection = () => {
   const [selectedServices, setSelectedServices] = useState<ServiceType[]>([]);
   const [modalContent, setModalContent] = useState<string | null>(null);
 
-  const handlePackageSelect = (id: string) => {
-    const pkg = packages.find((p) => p.id === id);
-    if (!pkg) return;
-
-    setSelectedPackages((prev) => {
-      if (prev.some((p) => p.id === id)) {
-        return prev.filter((p) => p.id !== id);
-      }
-      return [...prev, pkg];
-    });
-  };
-
   const handleServiceSelect = (id: string) => {
+    // Забороняємо додавання для "workshop" і "panel-discussion"
+    if (id === "workshop" || id === "panel-discussion") {
+      alert("This option cannot be added to the cart.");
+      return;
+    }
+  
     const service = additionalServices.find((s) => s.id === id);
     if (!service) return;
-
+  
     setSelectedServices((prev) => {
       if (prev.some((s) => s.id === id)) {
         return prev.filter((s) => s.id !== id);
@@ -236,9 +230,9 @@ const PackagesSection = () => {
   <PackageCard
     key={pkg.id}
     pkg={pkg}
-    isSelected={selectedPackages.some((p) => p.id === pkg.id)}
-    onSelect={() => handlePackageSelect(pkg.id)}
-    onInfoClick={() => handleInfoClick(pkg.info)}
+    isSelected={false} 
+    onSelect={() => {}}    
+    onInfoClick={() => {}}
     isLast={index === packages.length - 2}
   />
 ))}
@@ -248,13 +242,15 @@ const PackagesSection = () => {
         <h3 className="section-subtitle">Додаткові опції</h3>
 
         <div className="additional-services-container">
-          {additionalServices.map((service) => (
+        {additionalServices.map((service, index) => (
             <AdditionalService
               key={service.id}
               service={service}
               isSelected={selectedServices.some((s) => s.id === service.id)}
               onSelect={() => handleServiceSelect(service.id)}
               onInfoClick={() => handleInfoClick(service.info)}
+              isSoldOut={index >= additionalServices.length - 2} 
+
 
             />
           ))}

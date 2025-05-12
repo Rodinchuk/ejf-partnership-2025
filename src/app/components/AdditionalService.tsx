@@ -8,6 +8,8 @@ interface AdditionalServiceProps {
   isSelected: boolean;
   onSelect: (id: string) => void;
   onInfoClick?: (info: string | undefined) => void;
+  isSoldOut?: boolean; 
+
 }
 
 const AdditionalService: React.FC<AdditionalServiceProps> = ({
@@ -15,12 +17,15 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({
   isSelected,
   onSelect,
   onInfoClick,
+  isSoldOut,
+  
 }) => {
   return (
     <Button
       variant={isSelected ? "secondary" : "default"}
       onClick={() => onSelect(service.id)}
       className={`additional-option ${isSelected ? "selected" : ""}`}
+      disabled={isSoldOut}
     >
       <div className="service-content">
         <div className="service-indicator-wrapper">
@@ -48,7 +53,13 @@ const AdditionalService: React.FC<AdditionalServiceProps> = ({
           </div>
         )}
       </div>
+      {isSoldOut && (
+      <div className="sold-out-overlay">
+        <span className="sold-out-text">Sold Out</span>
+      </div>
+    )}
     </Button>
+   
   );
 };
 
