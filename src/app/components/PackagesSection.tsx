@@ -80,16 +80,7 @@ const packages: Package[] = [
 
 const additionalServices: ServiceType[] = [
   
-  {
-  id: "workshop",
-  name: "Проведення воркшопу (Залишилось 1!)",
-  price: 200,
-  info: `
-  <p><b>Проведення воркшопу</b></p>
-    <p style="color: gray">Залишилось 1!</p>
-    <p>Навчальний захід, де представники компанії допомагають учасникам розвиватися в темі, важливій для їхньої кар'єри.</p>
-    
-  `,},
+
   
   {
   id: "treasure-hunt",
@@ -100,14 +91,7 @@ const additionalServices: ServiceType[] = [
   <p>Студенти беруть участь у захопливому пошуку призів на території Львівської Політехніки за підказками з Instagram @best_lviv.</p>
 
   `,},
-  {
-  id: "panel-discussion",
-  name: "Панельна дискусія",
-  price: 150,
-  info: `
-  <p><b>Панельна дискусія</b></p>
-  <p>Обговорення підібраної теми між студентами та спікерами. Модератор допомагає взаємодіяти з усіма учасниками.</p>
-  `,},
+ 
 
   {
   id: "interview-simulation",
@@ -166,7 +150,24 @@ const additionalServices: ServiceType[] = [
   <p>Представлення ключових переваг вашої компанії у форматі поста на сторінці BEST Lviv.</p>
   `,},
 
-
+  {
+    id: "workshop",
+    name: "Проведення воркшопу",
+    price: 200,
+    info: `
+    <p><b>Проведення воркшопу</b></p>
+      <p style="color: gray">Залишилось 1!</p>
+      <p>Навчальний захід, де представники компанії допомагають учасникам розвиватися в темі, важливій для їхньої кар'єри.</p>
+      
+    `,},
+    {
+      id: "panel-discussion",
+      name: "Панельна дискусія",
+      price: 150,
+      info: `
+      <p><b>Панельна дискусія</b></p>
+      <p>Обговорення підібраної теми між студентами та спікерами. Модератор допомагає взаємодіяти з усіма учасниками.</p>
+      `,},
 ];
 
 
@@ -176,11 +177,7 @@ const PackagesSection = () => {
   const [modalContent, setModalContent] = useState<string | null>(null);
 
   const handleServiceSelect = (id: string) => {
-    // Забороняємо додавання для "workshop" і "panel-discussion"
-    if (id === "workshop" || id === "panel-discussion") {
-      alert("This option cannot be added to the cart.");
-      return;
-    }
+
   
     const service = additionalServices.find((s) => s.id === id);
     if (!service) return;
